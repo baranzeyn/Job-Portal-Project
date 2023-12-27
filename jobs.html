@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Jobs</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!--header starts-->
+    <header class="header">
+
+        <section class="flex">
+
+            <div id="menu-btn" class="fas fa-bars-staggered"></div>
+
+            <a href="home.html" class="logo"><i class="fas fa-briefcase" ></i>
+            JobHunt.</a>
+
+            <nav class="navbar">
+                <a href="home.html">Home</a>
+                <a href="about.html">About Us</a>
+                <a href="jobs.html">All jobs</a>
+                <a href="contact.html">Contact Us</a>
+                <a href="login.html">Account</a>
+            </nav>
+
+            <a href="#" class="btn" style="margin-top:0;">Post Job</a>
+        </section>
+
+
+    </header>
+
+    <!--header ends-->
+
+    <!--job filter section starts-->
+
+    <section class="job-filter">
+
+        <h1 class="heading">
+            filter jobs
+        </h1>
+
+        <form action="" method="post">
+            <div class="flex">
+                <div class="box">
+                    <p>job title <span>*</span></p>
+                    <input type="text"name="title" placeholder="keyword,category or company" required maxlength="20" class="input">
+                    </div>
+                <div class="box">
+                    <p>job location</p>
+                    <input type="text"name="location" placeholder="city, state or country" required maxlength="20" class="input">
+                </div>
+            </div>
+            <div class="dropdown-container">
+                <div class="dropdown">
+                    <input type="text" readonly placeholder="data posted" name="date" maxlength="20" class="output">
+                    <div class="lists">
+                        <p class="items">today</p>
+                        <p class="items">this week</p>
+                        <p class="items">this month</p>
+                        <p class="items">this year</p>
+                    </div>
+                    
+                </div>
+
+                <div class="dropdown">
+                    <input type="text" readonly name="date" placeholder="education level" maxlength="20" class="output">
+                    <div class="lists">
+                        <p class="items">12th pass</p>
+                        <p class="items">bachlelor's degree</p>
+                        <p class="items">master's degree</p>
+                        <p class="items">diploma</p>
+                        <p class="items">10th class</p>
+                        <p class="items">self-paced</p>
+                    </div> 
+                </div>
+
+                <div class="dropdown">
+                    <input type="text" readonly name="date" placeholder="estimated salary" maxlength="20" class="output">
+                    <div class="lists">
+                        <p class="items">1k or less</p>
+                        <p class="items">1k-5k</p>
+                        <p class="items">5k-10k</p>
+                        <p class="items">10k-20k</p>
+                        <p class="items">20k-30k</p>
+                    </div> 
+                </div>
+            </div>
+        </form>
+    </section>
+
+
+
+
+
+
+    <!--job filter section ends-->
+
+    <!--jobs section starts-->
+    <section class="jobs-container">
+
+        <h1 class="heading">all jobs</h1>
+        <div class="box-container">
+
+            <div class="box">
+                <div class="company">
+                    <img src="images/1.jpg" alt="">
+                    <div>
+                        <h3>IT infosys co.</h3>
+                        <p>2 day ago</p>
+                    </div>
+                </div>
+                <h3 class="job-title">senior web developer</h3>
+                <p class="location"><i class="fas fa-map-marker-alt"></i>
+                    <span>mumbai,india</span></p>
+                    <div class="tags">
+                        <!--jobs salary and other details-->
+                        <p><i class="fas fa-indian-rupee-sign"></i><span>10k-25k</span></p>
+                        <p><i class="fas fa-briefcase"></i><span>for project</span></p>
+                        <p><i class="fas fa-clock"></i><span>day shift</span></p>
+                    </div>
+                    <div class="flex-btn">
+                        <a href="view_job.html" class="btn"> view details</a>
+                        <button type="submit" class="far fa-heart" name="save"></button>
+                    </div>
+            </div>
+            <div class="box">
+                <div class="company">
+                    <img src="images/2.jpg" alt="">
+                    <div>
+                        <h3>Vision co.</h3>
+                        <p>3 day ago</p><!-- zaman bildirimi-->
+                    </div>
+                </div>
+                <h3 class="job-title">frontend web developer</h3>
+                <p class="location"><i class="fas fa-map-marker-alt"></i>
+                    <span>Massachusetts,usa</span></p>
+                    <div class="tags">
+                        <!--jobs salary and other details-->
+                        <p><i class="fa-solid fa-dollar-sign"></i><span>7k-8k</span></p>
+                        <p><i class="fas fa-briefcase"></i><span>for project</span></p>
+                        <p><i class="fas fa-clock"></i><span>day shift</span></p>
+                    </div>
+                    <div class="flex-btn">
+                        <a href="view_job.html" class="btn"> view details</a>
+                        <button type="submit" class="far fa-heart" name="save"></button>
+                    </div>
+            </div>
+            <div class="box">
+                <div class="company">
+                    <img src="images/3.jpg" alt="">
+                    <div>
+                        <h3>Leaf co.</h3>
+                        <p>5 day ago</p><!-- zaman bildirimi-->
+                    </div>
+                </div>
+                <h3 class="job-title">App developer (kotlin)</h3>
+                <p class="location"><i class="fas fa-map-marker-alt"></i>
+                    <span>Iowa,usa</span></p>
+                    <div class="tags">
+                        <!--jobs salary and other details-->
+                        <p><i class="fa-solid fa-dollar-sign"></i><span>10k-11k</span></p>
+                        <p><i class="fas fa-briefcase"></i><span>for project</span></p>
+                        <p><i class="fas fa-clock"></i><span>day shift</span></p>
+                    </div>
+                    <div class="flex-btn">
+                        <a href="view_job.html" class="btn"> view details</a>
+                        <button type="submit" class="far fa-heart" name="save"></button>
+                    </div>
+            </div>
+
+            <div class="box">
+                <div class="company">
+                    <img src="images/4.jpg" alt="">
+                    <div>
+                        <h3>Denver co.</h3>
+                        <p>7 day ago</p><!-- zaman bildirimi-->
+                    </div>
+                </div>
+                <h3 class="job-title">Data analyst</h3>
+                <p class="location"><i class="fas fa-map-marker-alt"></i>
+                    <span>madrid,spain</span></p>
+                    <div class="tags">
+                        <!--jobs salary and other details-->
+                        <p><i class="fa-solid fa-dollar-sign"></i><span>11k-12k</span></p>
+                        <p><i class="fas fa-briefcase"></i><span>for project</span></p>
+                        <p><i class="fas fa-clock"></i><span>day shift</span></p>
+                    </div>
+                    <div class="flex-btn">
+                        <a href="view_job.html" class="btn"> view details</a>
+                        <button type="submit" class="far fa-heart" name="save"></button>
+                    </div>
+            </div>
+
+            <div class="box">
+                <div class="company">
+                    <img src="images/7.jpg" alt="">
+                    <div>
+                        <h3>Denver co.</h3>
+                        <p>9 day ago</p><!-- zaman bildirimi-->
+                    </div>
+                </div>
+                <h3 class="job-title">Cloud Arhitecture</h3>
+                <p class="location"><i class="fas fa-map-marker-alt"></i>
+                    <span>İstanbul,Turkey</span></p>
+                    <div class="tags">
+                        <!--jobs salary and other details-->
+                        <p><i class="fa-solid fa-dollar-sign"></i><span>8k-9k</span></p>
+                        <p><i class="fas fa-briefcase"></i><span>for project</span></p>
+                        <p><i class="fas fa-clock"></i><span>day shift</span></p>
+                    </div>
+                    <div class="flex-btn">
+                        <a href="view_job.html" class="btn"> view details</a>
+                        <button type="submit" class="far fa-heart" name="save"></button>
+                    </div>
+            </div>
+
+            <div class="box">
+                <div class="company">
+                    <img src="images/6.jpg" alt="">
+                    <div>
+                        <h3>Denver co.</h3>
+                        <p>11 day ago</p><!-- zaman bildirimi-->
+                    </div>
+                </div>
+                <h3 class="job-title">game developer</h3>
+                <p class="location"><i class="fas fa-map-marker-alt"></i>
+                    <span>Rome,Italy</span></p>
+                    <div class="tags">
+                        <!--jobs salary and other details-->
+                        <p><i class="fa-solid fa-dollar-sign"></i><span>10k-11k</span></p>
+                        <p><i class="fas fa-briefcase"></i><span>for project</span></p>
+                        <p><i class="fas fa-clock"></i><span>flexible shift</span></p>
+                    </div>
+                    <div class="flex-btn">
+                        <a href="view_job.html" class="btn"> view details</a>
+                        <button type="submit" class="far fa-heart" name="save"></button>
+                    </div>
+            </div>
+            <!--biraz dahah iş eklenebilir ama artık iş tanımlandıkça ekleme yapılacak-->
+
+            
+        </div>
+
+    </section>
+
+
+
+
+
+
+    <!--jobs section ends-->
+
+    <footer class="footer">
+
+        <section class="grid">
+
+            <div class="box">
+                <h3>quick links</h3>
+                <a href="home.html"><i class="fas fa-angle-right"></i>home</a>
+                <a href="abouts.html"><i class="fas fa-angle-right"></i>abouts</a>
+                <a href="jobs.html"><i class="fas fa-angle-right"></i>all jobs</a>
+                <a href="contact.html"><i class="fas fa-angle-right"></i>contact us</a>
+                <a href="#"><i class="fas fa-angle-right"></i>filter search</a>
+            </div>
+            <div class="box">
+                <h3>extra links</h3>
+                <a href="#"><i class="fas fa-angle-right"></i>account</a>
+                <a href="login.html"><i class="fas fa-angle-right"></i>login</a>
+                <a href="register.html"><i class="fas fa-angle-right"></i>register</a>
+                <a href="#"><i class="fas fa-angle-right"></i>post job</a>
+                <a href="#"><i class="fas fa-angle-right"></i>dashboard</a>
+            </div>
+            <div class="box">
+                <h3>follow us</h3>
+                <a href="#"><i class="fab fa-facebook-f"></i>facebook</a>
+                <a href="#"><i class="fab fa-twitter"></i>twitter</a>
+                <a href="#"><i class="fab fa-instagram"></i>instagram</a>
+                <a href="#"> <i class="fab fa-linkedin"></i>linkedin</a>
+                <a href="#"><i class="fab fa-youtube"></i>youtube</a>
+            </div>
+        </section>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script>
+        let dropdown_items=document.querySelectorAll('.job-filter form .dropdown-container .dropdown .lists .items')
+        dropdown_items.forEach(items=> {
+            items.onclick=()=>{
+                items_parent=items.parentElement.parentElement;
+                let output= items_parent.querySelector('.output');
+                output.value=items.innerText;
+
+            }
+        })
+    </script>
+
+
+
+
+    
+</body>
+</html>

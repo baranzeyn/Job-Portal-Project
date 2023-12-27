@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!--header starts-->
+    <header class="header">
+
+        <section class="flex">
+
+            <div id="menu-btn" class="fas fa-bars-staggered"></div>
+
+            <a href="home.html" class="logo"><i class="fas fa-briefcase" ></i>
+            JobHunt.</a>
+
+            <nav class="navbar">
+                <a href="home.html">Home</a>
+                <a href="about.html">About Us</a>
+                <a href="jobs.html">All jobs</a>
+                <a href="contact.html">Contact Us</a>
+                <a href="login.html">Account</a>
+            </nav>
+
+            <a href="#" class="btn" style="margin-top:0;">Post Job</a>
+        </section>
+
+    </header>
+    <!--header ends-->
+
+    <div class="home-container">
+
+        <section class="home">
+            <form action="" method="post">
+                <h3>find your new job</h3>
+                <p>job title <span>*</span></p>
+                <input type="text"name="title" placeholder="keyword,category or company" required maxlength="20" class="input">
+                <p>job location </p>
+                <input type="text"name="location" placeholder="city, state or country" required maxlength="20" class="input">
+                <input type="submit" value="search job" name="search" class="btn">
+            </form>
+        </section>
+    </div>
+    <!--category starts-->
+    <section class="category">
+
+        <h1 class="heading">job categories</h1>
+        <div class="box-container">
+            <a href="#" class="box">
+                <i class="fa fa-code"></i>
+                <div>
+                    <h3>Software developer</h3>
+                    <span>2200 jobs</span>
+                </div>
+            </a>
+
+            <a href="#" class="box">
+                <i class="fa fa-pen"></i>
+                <div>
+                    <h3>fullstack web developer</h3>
+                    <span>2200 jobs</span>
+                </div>
+            </a>
+
+            <a href="#" class="box">
+                <i class="fa fa-bullhorn"></i>
+                <div>
+                    <h3>android app developer</h3>
+                    <span>2200 jobs</span>
+                </div>
+            </a>
+            <a href="#" class="box">
+                <i class="fa fa-wrench"></i>
+                <div>
+                    <h3>Game developer</h3>
+                    <span>2200 jobs</span>
+                </div>
+            </a>
+
+            <a href="#" class="box">
+                <i class="fa fa-headset"></i>
+                <div>
+                    <h3>backend developer</h3>
+                    <span>2200 jobs</span>
+                </div>
+            </a>
+            <a href="#" class="box">
+                <i class="fa fa-wrench"></i>
+                <div>
+                    <h3>project management</h3>
+                    <span>2200 jobs</span>
+                </div>
+            </a>
+            <a href="#" class="box">
+                <i class="fa fa-wrench"></i>
+                <div>
+                    <h3>cloud development</h3>
+                    <span>2200 jobs</span>
+                </div>
+            </a>
+            <a href="#" class="box">
+                <i class="fa fa-wrench"></i>
+                <div>
+                    <h3>data engineering</h3>
+                    <span>2200 jobs</span>
+                </div>
+            </a>
+
+        </div>
+    </section>
+    <!--category ends-->
+
+
+    <!--jobs section starts-->
+
+    <section class="jobs-container">
+
+        <h1 class="heading">latest jobs</h1>
+        <div class="box-container">
+
+            <div class="box">
+                <div class="company">
+                    <img src="images/1.jpg" alt="">
+                    <div>
+                        <h3>IT infosys co.</h3>
+                        <p>2 day ago</p>
+                    </div>
+                </div>
+                <h3 class="job-title">senior web developer</h3>
+                <p class="location"><i class="fas fa-map-marker-alt"></i>
+                    <span>mumbai,india</span></p>
+                    <div class="tags">
+                        <!--jobs salary and other details-->
+                        <p><i class="fas fa-indian-rupee-sign"></i><span>10k-25k</span></p>
+                        <p><i class="fas fa-briefcase"></i><span>for project</span></p>
+                        <p><i class="fas fa-clock"></i><span>day shift</span></p>
+                    </div>
+                    <div class="flex-btn">
+                        <a href="view_job.html" class="btn"> view details</a>
+                        <button type="submit" class="far fa-heart" name="save"></button>
+                    </div>
+            </div>
+            <div class="box">
+                <div class="company">
+                    <img src="images/2.jpg" alt="">
+                    <div>
+                        <h3>Vision co.</h3>
+                        <p>3 day ago</p><!-- zaman bildirimi-->
+                    </div>
+                </div>
+                <h3 class="job-title">frontend web developer</h3>
+                <p class="location"><i class="fas fa-map-marker-alt"></i>
+                    <span>Massachusetts,usa</span></p>
+                    <div class="tags">
+                        <!--jobs salary and other details-->
+                        <p><i class="fa-solid fa-dollar-sign"></i><span>7k-8k</span></p>
+                        <p><i class="fas fa-briefcase"></i><span>for project</span></p>
+                        <p><i class="fas fa-clock"></i><span>day shift</span></p>
+                    </div>
+                    <div class="flex-btn">
+                        <a href="view_job.html" class="btn"> view details</a>
+                        <button type="submit" class="far fa-heart" name="save"></button>
+                    </div>
+            </div>
+            <div class="box">
+                <div class="company">
+                    <img src="images/3.jpg" alt="">
+                    <div>
+                        <h3>Leaf co.</h3>
+                        <p>5 day ago</p><!-- zaman bildirimi-->
+                    </div>
+                </div>
+                <h3 class="job-title">App developer (kotlin)</h3>
+                <p class="location"><i class="fas fa-map-marker-alt"></i>
+                    <span>Iowa,usa</span></p>
+                    <div class="tags">
+                        <!--jobs salary and other details-->
+                        <p><i class="fa-solid fa-dollar-sign"></i><span>10k-11k</span></p>
+                        <p><i class="fas fa-briefcase"></i><span>for project</span></p>
+                        <p><i class="fas fa-clock"></i><span>day shift</span></p>
+                    </div>
+                    <div class="flex-btn">
+                        <a href="view_job.html" class="btn"> view details</a>
+                        <button type="submit" class="far fa-heart" name="save"></button>
+                    </div>
+            </div>
+
+            <div class="box">
+                <div class="company">
+                    <img src="images/4.jpg" alt="">
+                    <div>
+                        <h3>Denver co.</h3>
+                        <p>7 day ago</p><!-- zaman bildirimi-->
+                    </div>
+                </div>
+                <h3 class="job-title">Data analyst</h3>
+                <p class="location"><i class="fas fa-map-marker-alt"></i>
+                    <span>madrid,spain</span></p>
+                    <div class="tags">
+                        <!--jobs salary and other details-->
+                        <p><i class="fa-solid fa-dollar-sign"></i><span>11k-12k</span></p>
+                        <p><i class="fas fa-briefcase"></i><span>for project</span></p>
+                        <p><i class="fas fa-clock"></i><span>day shift</span></p>
+                    </div>
+                    <div class="flex-btn">
+                        <a href="view_job.html" class="btn"> view details</a>
+                        <button type="submit" class="far fa-heart" name="save"></button>
+                    </div>
+            </div>
+
+            <div class="box">
+                <div class="company">
+                    <img src="images/7.jpg" alt="">
+                    <div>
+                        <h3>Denver co.</h3>
+                        <p>9 day ago</p><!-- zaman bildirimi-->
+                    </div>
+                </div>
+                <h3 class="job-title">Cloud Arhitecture</h3>
+                <p class="location"><i class="fas fa-map-marker-alt"></i>
+                    <span>İstanbul,Turkey</span></p>
+                    <div class="tags">
+                        <!--jobs salary and other details-->
+                        <p><i class="fa-solid fa-dollar-sign"></i><span>8k-9k</span></p>
+                        <p><i class="fas fa-briefcase"></i><span>for project</span></p>
+                        <p><i class="fas fa-clock"></i><span>day shift</span></p>
+                    </div>
+                    <div class="flex-btn">
+                        <a href="view_job.html" class="btn"> view details</a>
+                        <button type="submit" class="far fa-heart" name="save"></button>
+                    </div>
+            </div>
+
+            <div class="box">
+                <div class="company">
+                    <img src="images/6.jpg" alt="">
+                    <div>
+                        <h3>Denver co.</h3>
+                        <p>11 day ago</p><!-- zaman bildirimi-->
+                    </div>
+                </div>
+                <h3 class="job-title">game developer</h3>
+                <p class="location"><i class="fas fa-map-marker-alt"></i>
+                    <span>Rome,Italy</span></p>
+                    <div class="tags">
+                        <!--jobs salary and other details-->
+                        <p><i class="fa-solid fa-dollar-sign"></i><span>10k-11k</span></p>
+                        <p><i class="fas fa-briefcase"></i><span>for project</span></p>
+                        <p><i class="fas fa-clock"></i><span>flexible shift</span></p>
+                    </div>
+                    <div class="flex-btn">
+                        <a href="view_job.html" class="btn"> view details</a>
+                        <button type="submit" class="far fa-heart" name="save"></button>
+                    </div>
+            </div>
+            
+
+            
+        </div>
+
+        <div style="text-align: center;margin-top: 2rem;">
+            <a href="jobs.html" class="btn"> view All</a>
+        </div>
+    </section>
+    <!--jobs section ends-->
+
+
+
+
+    <!--footer starts-->
+
+    <footer class="footer">
+
+        <section class="grid">
+
+            <div class="box">
+                <h3>quick links</h3>
+                <a href="home.html"><i class="fas fa-angle-right"></i>home</a>
+                <a href="abouts.html"><i class="fas fa-angle-right"></i>abouts</a>
+                <a href="jobs.html"><i class="fas fa-angle-right"></i>all jobs</a>
+                <a href="contact.html"><i class="fas fa-angle-right"></i>contact us</a>
+                <a href="#"><i class="fas fa-angle-right"></i>filter search</a>
+            </div>
+            <div class="box">
+                <h3>extra links</h3>
+                <a href="#"><i class="fas fa-angle-right"></i>account</a>
+                <a href="login.html"><i class="fas fa-angle-right"></i>login</a>
+                <a href="register.html"><i class="fas fa-angle-right"></i>register</a>
+                <a href="#"><i class="fas fa-angle-right"></i>post job</a>
+                <a href="#"><i class="fas fa-angle-right"></i>dashboard</a>
+            </div>
+            <div class="box">
+                <h3>follow us</h3>
+                <a href="#"><i class="fab fa-facebook-f"></i>facebook</a>
+                <a href="#"><i class="fab fa-twitter"></i>twitter</a>
+                <a href="#"><i class="fab fa-instagram"></i>instagram</a>
+                <a href="#"> <i class="fab fa-linkedin"></i>linkedin</a>
+                <a href="#"><i class="fab fa-youtube"></i>youtube</a>
+            </div>
+        </section>
+    </footer>
+    <!--footer ends-->
+
+    <script src="js/script.js"></script>
+
+
+
+
+    
+</body>
+</html>
