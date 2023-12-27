@@ -688,15 +688,15 @@ section{
 .job-details .details .save span{
     color: var(--light-color);
 }
-
-.contact .box-container{
+.post-job .box-container,.contact .box-container{
     display: grid;
     grid-template-columns: repeat(auto-fit,35rem);
     gap: 1.5rem;
     align-items: flex-start;
     justify-content: center;
 }
-.contact .box-container .box{
+
+.post-job .box-container .box,.contact .box-container .box{
     background-color: var(--white);
     border: var(--border);
     border-radius: .5rem;
@@ -705,7 +705,7 @@ section{
     text-align: center;
 }
 
-.contact .box-container .box i{
+.post-job .box-container .box i,.contact .box-container .box i{
     height: 4.5rem;
     width: 5rem;
     line-height: 4.5rem;
@@ -716,15 +716,14 @@ section{
     margin-bottom: 2rem;
 }
 
-.contact .box-container .box a{
+.post-job .box-container .box a,.contact .box-container .box a{
     display: block;
     padding-top: .5rem;
     font-size: 1.6rem;
     color: var(--light-color);
     line-height: 1.;
 }
-
-.contact form{
+.post-job form,.contact form{
     margin-top: 2rem;
     background-color: var(--white);
     border: var(--border);
@@ -733,24 +732,22 @@ section{
     padding:2rem ;
     text-align: center;
 }
-.contact form h3{
+.post-job form h3,.contact form h3{
     font-size: 2.5rem;
     color:var(--black) ;
     text-transform: capitalize;
     margin-bottom: 1rem;
 }
 
-.contact form .flex{
+.post-job form .flex,.contact form .flex{
     display: flex;
     flex-wrap: wrap;
     column-gap: 1rem;
 }
-
-.contact form .flex .box{
+.post-job .flex .box,.contact form .flex .box{
     flex: 1 1 40rem;
 }
-
-.contact form .input{
+.post-job form .input,.contact form .input{
     width: 100%;
     border-radius: .5rem;
     padding: 1.4rem;
@@ -759,21 +756,21 @@ section{
     background-color: var(--light-bg);
     margin: 1rem 0;
 }
-
-.contact form p{
+.post-job form p,.contact form p{
     text-align: left;
     font-size: 1.6rem;
     padding-top: 1rem;
     color: var(--light-color);
 }
-.contact form span {
+.post-job form span,.contact form span {
     color: var(--red);
 }
 
-.contact form textarea{
+.post-job form textarea,.contact form textarea{
     height: 15rem;
     resize: none;
 }
+
 
 .account-form-container{
     background: url('../images/5.jpg'),rgba(0, 0, 0, .7) no-repeat;

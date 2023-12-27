@@ -27,7 +27,7 @@
                 <a href="login.html">Account</a>
             </nav>
 
-            <a href="#" class="btn" style="margin-top:0;">Post Job</a>
+            <a href="post_job.html" class="btn" style="margin-top:0;">Post Job</a>
         </section>
 
 
@@ -44,12 +44,24 @@
             <form action="" method="post">
 
                 <h3>welcome back</h3>
-                <input type="email" required name="email" maxlength="50" placeholder="please enter your email"
+                <div class="box">
+                    <select name="role" required class="input" >
+                        <option value="admin">admin</option>
+                        <option value="user">user</option>
+                    </select>
+                </div>
+                <div class="box">
+                    <input type="email" required name="email" maxlength="50" placeholder="please enter your email"
                     class="input">
-                <input type="password" required name="pass" maxlength="50" placeholder="please enter your password"
+                </div>
+                <div class="box">
+                    <input type="password" required name="pass" maxlength="50" placeholder="please enter your password"
                     class="input">
+                </div>
+                
                 <p>don't have an account <a href="register.html">register now</a></p>
                 <input type="submit" value="login now" name="submit" class="btn">
+
             </form>
         </section>
     </div>
@@ -68,10 +80,10 @@
             </div>
             <div class="box">
                 <h3>extra links</h3>
-                <a href="#"><i class="fas fa-angle-right"></i>account</a>
+                <a href="login.html"><i class="fas fa-angle-right"></i>account</a>
                 <a href="login.html"><i class="fas fa-angle-right"></i>login</a>
                 <a href="register.html"><i class="fas fa-angle-right"></i>register</a>
-                <a href="#"><i class="fas fa-angle-right"></i>post job</a>
+                <a href="post_job.html"><i class="fas fa-angle-right"></i>post job</a>
                 <a href="#"><i class="fas fa-angle-right"></i>dashboard</a>
             </div>
             <div class="box">

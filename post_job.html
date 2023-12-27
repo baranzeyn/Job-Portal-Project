@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contacts</title>
+    <title>Home</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -28,62 +28,66 @@
             <a href="post_job.html" class="btn" style="margin-top:0;">Post Job</a>
         </section>
 
-
     </header>
 
     <!-- header section ends -->
 
-    <!-- contact us section starts -->
+    <!-- post job section starts -->
 
-    <div class="section-title">contact us</div>
+    <div class="section-title">Post job</div>
 
-    <section class="contact">
-
-        <div class="box-container">
-            <div class="box">
-                <i class="fas fa-phone"></i>
-                <a href="tel:1234567890">123-456-7890</a>
-            </div>
-    
-            <div class="box">
-                <i class="fas fa-envelope"></i>
-                <a href="mailto:baranzeyn226@gmail.com">baranzeyn226@gmail.com</a>
-            </div>
-        </div>
-
+    <section class="post-job">
         <form action="" method="post">
-            <h3>drop your message</h3>
+            <h3>Post your job</h3>
             <div class="flex">
                 <div class="box">
-                    <p>name <span>*</span></p>
-                    <input type="text" name="name" required maxlength="20" placeholder="enter your name" class="input">
-                </div>
-
-                <div class="box">
-                    <p>email <span>*</span></p>
-                    <input type="email" name="email" required maxlength="20" placeholder="enter your email" class="input">
+                    <p>company<span>*</span></p>
+                    <input type="text" name="name" required maxlength="20" placeholder="company name" class="input">
                 </div>
                 <div class="box">
-                    <p>number <span>*</span></p>
-                    <input type="number" name="number" required min="0" max="9999999999" maxlength="20" placeholder="enter your number" class="input">
+                    <p>job title<span>*</span></p>
+                    <input type="text" name="name" required maxlength="20" placeholder="offered role" class="input">
                 </div>
                 <div class="box">
-                    <p>role <span>*</span></p>
-                    <select name="role" required class="input">
-                        <option value="employee">job seeker(empoloyee)</option>
-                        <option value="employeer">job provider(employeer)</option>
-                    </select>
+                    <p>location<span>*</span></p>
+                    <input type="text" name="name" required maxlength="20" placeholder="location" class="input">
+                </div>
+                <div class="box">
+                    <p>education<span>*</span></p>
+                    <input type="text" name="name" required maxlength="20" placeholder="education" class="input">
+                </div>
+                <div class="box">
+                    <p>experience<span>*</span></p>
+                    <input type="text" name="name" required maxlength="20" placeholder="experience" class="input">
+                </div>
+                <div class="box">
+                    <p>shift type<span>*</span></p>
+                    <input type="text" name="name" required maxlength="20" placeholder="day/night" class="input">
+                </div>
+                <div class="box">
+                    <p>number of candidate <span>*</span></p>
+                    <input type="number" name="name" required maxlength="50" placeholder="location" class="input">
+                </div>
+                <div class="box">
+                    <p>requirements <span>*</span></p>
+                    <input type="text" name="requirements" required maxlength="20" placeholder="expected requirements" class="input">
+                </div>
+                <div class="box">
+                    <p>skills <span>*</span></p>
+                    <input type="text"  maxlength="50" placeholder="expected skills" class="input">
+                </div>
+                <div class="box">
+                    <p>salary<span>*</span></p>
+                    <input type="number" name="salary" class="input" required min="0" max="9999999999" maxlength="20" placeholder="enter your salary offer">
+        
                 </div>
             </div>
-            <p>message <span>*</span></p>
-            <textarea name="message"  required maxlength="1000" cols="30" rows="10" placeholder="enter your message" class="input" ></textarea>
-            <input type="submit" value="send message" name="send" class="btn">
+            <p>Job/Project Description <span>*</span></p>
+            <textarea name="description"  required maxlength="1000" cols="30" rows="10" placeholder="enter your project/jobs description" class="input" ></textarea>
+            <input type="submit" value="send job" name="send" class="btn">
         </form>
     </section>
-    
-    <!-- contact us section ends -->
 
-    <!-- footer section starts -->
     <footer class="footer">
 
         <section class="grid">
@@ -117,9 +121,6 @@
 
     <script src="js/script.js"></script>
 
-
-
-
-    
 </body>
+
 </html>
