@@ -1,0 +1,29 @@
+    <!-- register section starts -->
+
+    <div class="account-form-container">
+
+        <section class="account-form">
+
+            <form action="" method="post">
+
+                <h3>create new account</h3>
+                <div class="box">
+                    <select name="role" required class="input">
+                        <option value="admin">admin</option>
+                        <option value="user">user</option>
+                    </select>
+                </div>
+                <input type="text" required name="name-" maxlength="50" placeholder="please enter your name and surname"
+                    class="input">
+                <input type="email" required name="email" maxlength="50" placeholder="please enter your email"
+                    class="input">
+
+                <input type="password" required name="pass" maxlength="20" placeholder="please enter your password"
+                    class="input">
+                <input type="password" required name="c_pass" maxlength="20" placeholder="confirm your password"
+                    class="input">
+                <p>already have an account <a asp-controller="Account" asp-action="Index">login now</a></p>
+                <input type="submit" value="register now" name="submit" class="btn">
+            </form>
+        </section>
+    </div>
