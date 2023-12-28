@@ -1,0 +1,8 @@
+CREATE TABLE Messages (
+    MessageID INT PRIMARY KEY IDENTITY(1,1),
+    SenderName NVARCHAR(50) NOT NULL,
+    SenderEmail NVARCHAR(100) NOT NULL,
+    SenderRole NVARCHAR(20) NOT NULL,
+    MessageText NVARCHAR(1000) NOT NULL,
+    Timestamp DATETIME DEFAULT GETDATE()
+);
