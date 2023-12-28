@@ -1,13 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About</title>
-    <link rel="stylesheet" href="css/style.css">
+    <title>Home</title>
+    <link rel="stylesheet" href="../css/style.css">
 </head>
-
 <body>
     <!--header starts-->
     <header class="header">
@@ -16,20 +14,23 @@
 
             <div id="menu-btn" class="fas fa-bars-staggered"></div>
 
-            <a href="home.html" class="logo"><i class="fas fa-briefcase"></i>
-                JobHunt.</a>
+            <a href="home.html" class="logo"><i class="fas fa-briefcase" ></i>
+            JobHunt.</a>
 
             <nav class="navbar">
+                <!-- admin girişi olursa buradaki display özelliği inline block olacak -->
+                <a href="admin.html" style="display: none;">Applications</a>
                 <a href="home.html">Home</a>
                 <a href="about.html">About Us</a>
                 <a href="jobs.html">All jobs</a>
                 <a href="contact.html">Contact Us</a>
-                <a href="login.html">Account</a>
+                <!-- user girişi olursa displayi inline block yap -->
+                <a href="user.html" style="display: none;">Account</a>
+                <a href="login.html">Login </a>
             </nav>
 
-            <a href="post_job.html" class="btn" style="margin-top:0;">Post Job</a>
+            <a href="post_job.html" class="btn" style="margin-top:0;display:none;">Post Job</a>
         </section>
-
 
     </header>
     <!--header ends-->
@@ -41,9 +42,10 @@
 
     <section class="about">
 
-        <img src="images/applynow2.jpg" alt="">
+        <img src="../images/applynow2.jpg" alt="">
         <div class="box">
             <h3>why choose us?</h3>
+            <p><a href="user.html"> abc</a></p>
             <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatibus at fuga accusantium deleniti hic?
                 Praesentium, porro vitae quis nobis modi, ex debitis quod voluptatum, expedita officiis corporis optio
                 obcaecati reprehenderit!</p>
@@ -83,7 +85,7 @@
                     aut placeat? Placeat, fugit molestias
                 </p>
                 <div class="user">
-                    <img src="images/sariye.jpeg" alt="">
+                    <img src="../images/sariye.jpeg" alt="">
                     <div>
                         <h3>sariye yaman</h3>
                         <span>data analyst</span>
@@ -102,7 +104,7 @@
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat aperiam hic dignissimos ullam ab in
                     aut placeat? Placeat, fugit molestias.</p>
                 <div class="user">
-                    <img src="images/koçer.jpg" alt="">
+                    <img src="../images/koçer.jpg" alt="">
                     <div>
                         <h3>taha koçer</h3>
                         <span>software developer</span>
@@ -121,7 +123,7 @@
                 <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eveniet nulla iure rem ut optio blanditiis
                     ipsum cum, officiis mollitia est.</p>
                 <div class="user">
-                    <img src="images/zeynep.jpeg" alt=""><!--userpic-->
+                    <img src="../images/zeynep.jpeg" alt=""><!--userpic-->
                     <div>
                         <h3>zeynep baran</h3>
                         <span>app developer</span>
@@ -156,7 +158,6 @@
                 <a href="login.html"><i class="fas fa-angle-right"></i>account</a>
                 <a href="login.html"><i class="fas fa-angle-right"></i>login</a>
                 <a href="register.html"><i class="fas fa-angle-right"></i>register</a>
-                <a href="post_job.html"><i class="fas fa-angle-right"></i>post job</a>
                 <a href="#"><i class="fas fa-angle-right"></i>dashboard</a>
             </div>
             <div class="box">
@@ -170,7 +171,7 @@
         </section>
     </footer>
 
-    <script src="js/script.js"></script>
+    <script src="../js/script.js"></script>
 
 
 

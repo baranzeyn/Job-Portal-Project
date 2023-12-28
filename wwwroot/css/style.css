@@ -301,7 +301,7 @@ section{
 .category .box-container .box:hover i{
     background-color: var(--white);
 }
-.jobs-container .box-container{
+.jobs-container .box-container,.application-container .box-container{
     display: grid;
     grid-template-columns: repeat(auto-fit,35rem);
     gap: 1.5rem;
@@ -309,7 +309,7 @@ section{
     justify-content: center;
 }
 
-.jobs-container .box-container .box{
+.jobs-container .box-container .box,.application-container .box-container .box{
     background-color: var(--white);
     border-radius: .5rem;
     border: var(--border);
@@ -318,20 +318,20 @@ section{
     overflow-x: hidden;
 }
 
-.jobs-container .box-container .box .company{
+.jobs-container .box-container .box .company,.application-container .box-container .box .company{
     display: flex;
     align-items: center;
     gap: 1.5rem;
     margin-bottom: 1.5rem;
 }
 
-.jobs-container .box-container .box .company img{
+.jobs-container .box-container .box .company img,.application-container .box-container .box .company img{
     height: 7rem;
     width: 7rem;
     object-fit: contain;
 }
 
-.jobs-container .box-container .box .company h3{
+.jobs-container .box-container .box .company h3,.application-container .box-container .box .company h3{
     font-size: 1.8rem;
     color: var(--black);
     text-overflow: ellipsis;
@@ -340,35 +340,35 @@ section{
     padding-bottom: .5rem;
 }
 
-.jobs-container .box-container .box .company p{
+.jobs-container .box-container .box .company p,.application-container .box-container .box .company p{
     color: var(--light-color);
     font-size: 1.6rem;
 }
 
-.jobs-container .box-container .box .job-title,.offer{
+.jobs-container .box-container .box .job-title,.offer,.application-container .box-container .box .job-title {
     font-size: 2rem;
     text-transform: capitalize;
     color: var(--black);
     overflow-x: hidden;
     text-overflow: ellipsis;
 }
-.jobs-container .box-container .box .location{
+.jobs-container .box-container .box .location,.application-container .box-container .box .location{
     padding: .7rem 0;
     font-size: 1.6rem;
     color: var(--light-color);
 }
-.jobs-container .box-container .box .location i{
+.jobs-container .box-container .box .location i,.application-container .box-container .box .location i{
     margin-right: .3rem;
     color: var(--main-color);
 }
 
-.jobs-container .box-container .box .tags{
+.jobs-container .box-container .box .tags,.application-container .box-container .box .tags{
     display: flex;
     flex-wrap: wrap;
     gap: 1rem;
     margin: 1.2rem 0;
 }
-.jobs-container .box-container .box .tags p{
+.jobs-container .box-container .box .tags p,.application-container .box-container .box .tags p{
     padding: 1.2rem;
     border-radius: .5rem;
     background-color: var(--light-bg);
@@ -376,7 +376,7 @@ section{
     color: var(--light-color);
 }
 
-.jobs-container .box-container .box .tags p i{
+.jobs-container .box-container .box .tags p i,.application-container .box-container .box .tags p i{
     margin-right: .5rem;
     color: var(--black);
 }

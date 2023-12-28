@@ -33,57 +33,36 @@
     </header>
     <!--header ends-->
 
-    <!-- contact us section starts -->
 
-    <div class="section-title">contact us</div>
 
-    <section class="contact">
+    <!-- offer section starts -->
 
-        <div class="box-container">
-            <div class="box">
-                <i class="fas fa-phone"></i>
-                <a href="tel:1234567890">123-456-7890</a>
-            </div>
-    
-            <div class="box">
-                <i class="fas fa-envelope"></i>
-                <a href="mailto:baranzeyn226@gmail.com">baranzeyn226@gmail.com</a>
-            </div>
-        </div>
+    <section class="offer">
+
+        <h1 class="heading">
+            offer
+        </h1>
 
         <form action="" method="post">
-            <h3>drop your message</h3>
             <div class="flex">
                 <div class="box">
-                    <p>name <span>*</span></p>
-                    <input type="text" name="name" required maxlength="20" placeholder="enter your name" class="input">
-                </div>
-
+                    <p>Price<span>*</span></p>
+                    <input type="number"name="price" placeholder="offered price" required maxlength="20" min="0" class="input">
+                    </div>
                 <div class="box">
-                    <p>email <span>*</span></p>
-                    <input type="email" name="email" required maxlength="20" placeholder="enter your email" class="input">
-                </div>
-                <div class="box">
-                    <p>number <span>*</span></p>
-                    <input type="number" name="number" required min="0" max="9999999999" maxlength="20" placeholder="enter your number" class="input">
-                </div>
-                <div class="box">
-                    <p>role <span>*</span></p>
-                    <select name="role" required class="input">
-                        <option value="employee">job seeker(empoloyee)</option>
-                        <option value="employeer">job provider(employeer)</option>
-                    </select>
+                    <p>Time <span>*</span></p>
+                    <input type="number"name="time" placeholder="offered deadline" required maxlength="20" min="0" class="input">
                 </div>
             </div>
-            <p>message <span>*</span></p>
-            <textarea name="message"  required maxlength="1000" cols="30" rows="10" placeholder="enter your message" class="input" ></textarea>
-            <input type="submit" value="send message" name="send" class="btn">
-        </form>
+    </form>
+    <input type="submit"  value="send offer" name="send" class="btn" style="align-items: center;">
     </section>
-    
-    <!-- contact us section ends -->
 
-    <!-- footer section starts -->
+    <!-- offer section ends -->
+
+
+<!-- footer section starts -->
+
     <footer class="footer">
 
         <section class="grid">
@@ -114,12 +93,6 @@
             </div>
         </section>
     </footer>
+    <!-- footer section ends -->
 
     <script src="../js/script.js"></script>
-
-
-
-
-    
-</body>
-</html>

@@ -18,7 +18,7 @@
             JobHunt.</a>
 
             <nav class="navbar">
-                <a href="admin.html" style="display: none;">Applications</a>
+                <a href="admin.html">Applications</a>
                 <a href="home.html">Home</a>
                 <a href="about.html">About Us</a>
                 <a href="jobs.html">All jobs</a>
@@ -33,57 +33,41 @@
     </header>
     <!--header ends-->
 
-    <!-- contact us section starts -->
+    <section class="application-container">
 
-    <div class="section-title">contact us</div>
-
-    <section class="contact">
-
+        <h1 class="heading">all applications</h1>
         <div class="box-container">
+
             <div class="box">
-                <i class="fas fa-phone"></i>
-                <a href="tel:1234567890">123-456-7890</a>
-            </div>
-    
-            <div class="box">
-                <i class="fas fa-envelope"></i>
-                <a href="mailto:baranzeyn226@gmail.com">baranzeyn226@gmail.com</a>
+                <div class="company">
+                    <img src="../images/1.jpg" alt="">
+                    <div>
+                        <h3>IT infosys co.</h3>
+                        <h3 class="job-title">senior web developer</h3>
+                        <p>2 day ago</p>
+                        
+                    </div>
+                </div>
+                    <h3 class="name">applicators name:</h3>
+                        <p></p>
+                        <h3 class="surname">applicators surname:</h3>
+                        <p></p>
+                <p class="location"><i class="fas fa-map-marker-alt"></i>
+                    <span>mumbai,india</span></p>
+                    <div class="tags">
+                        <!--jobs salary and other details-->
+                        <p><i class="fas fa-indian-rupee-sign"></i><span>offeered price</span></p>
+                        <p><i class="fas fa-clock"></i><span>deadline</span></p>
+                    </div>
+                    <div class="flex-btn">
+                        <button type="submit" class="btn" name="accept">accept</button>
+                        <button type="submit" class="btn" name="decline" style="background-color: rgb(197, 41, 41);">decline</button>
+                    </div>
             </div>
         </div>
-
-        <form action="" method="post">
-            <h3>drop your message</h3>
-            <div class="flex">
-                <div class="box">
-                    <p>name <span>*</span></p>
-                    <input type="text" name="name" required maxlength="20" placeholder="enter your name" class="input">
-                </div>
-
-                <div class="box">
-                    <p>email <span>*</span></p>
-                    <input type="email" name="email" required maxlength="20" placeholder="enter your email" class="input">
-                </div>
-                <div class="box">
-                    <p>number <span>*</span></p>
-                    <input type="number" name="number" required min="0" max="9999999999" maxlength="20" placeholder="enter your number" class="input">
-                </div>
-                <div class="box">
-                    <p>role <span>*</span></p>
-                    <select name="role" required class="input">
-                        <option value="employee">job seeker(empoloyee)</option>
-                        <option value="employeer">job provider(employeer)</option>
-                    </select>
-                </div>
-            </div>
-            <p>message <span>*</span></p>
-            <textarea name="message"  required maxlength="1000" cols="30" rows="10" placeholder="enter your message" class="input" ></textarea>
-            <input type="submit" value="send message" name="send" class="btn">
-        </form>
+        
     </section>
-    
-    <!-- contact us section ends -->
 
-    <!-- footer section starts -->
     <footer class="footer">
 
         <section class="grid">
@@ -101,7 +85,6 @@
                 <a href="login.html"><i class="fas fa-angle-right"></i>account</a>
                 <a href="login.html"><i class="fas fa-angle-right"></i>login</a>
                 <a href="register.html"><i class="fas fa-angle-right"></i>register</a>
-                
                 <a href="#"><i class="fas fa-angle-right"></i>dashboard</a>
             </div>
             <div class="box">
@@ -115,11 +98,5 @@
         </section>
     </footer>
 
-    <script src="../js/script.js"></script>
-
-
-
-
-    
 </body>
 </html>

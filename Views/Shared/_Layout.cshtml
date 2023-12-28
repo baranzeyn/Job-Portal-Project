@@ -30,7 +30,8 @@
                 <a asp-controller="Contact" asp-action="Index">Contact Us</a>
                 <a asp-controller="Account" asp-action="Index">Account</a>
             </nav>
-            <a asp-controller="Jobs" asp-action="Postjob" class="btn" style="margin-top:0;">Post Job</a>
+            <!-- admin girşi yapıldıysa display özelliğini inline block yap -->
+            <a asp-controller="Jobs" asp-action="Postjob" class="btn" style="margin-top:0;display:none;">Post Job</a>
         </section>
 
     </header>

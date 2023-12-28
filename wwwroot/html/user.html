@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Register</title>
-    <link rel="stylesheet" href="css/style.css">
+    <title>Home</title>
+    <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
     <!--header starts-->
@@ -18,49 +18,35 @@
             JobHunt.</a>
 
             <nav class="navbar">
+                <a href="admin.html" style="display: none;">Applications</a>
                 <a href="home.html">Home</a>
                 <a href="about.html">About Us</a>
                 <a href="jobs.html">All jobs</a>
                 <a href="contact.html">Contact Us</a>
-                <a href="login.html">Account</a>
+                <a href="user.html" style="display: none;">Account</a>
+                <a href="login.html">Login </a>
             </nav>
 
-            <a href="post_job.html" class="btn" style="margin-top:0;">Post Job</a>
+            <a href="post_job.html" class="btn" style="margin-top:0;display:none;">Post Job</a>
         </section>
 
-
     </header>
-    <!-- header section ends -->
+    <!--header ends-->
+
+    <div class="section-title"> Account</div>
 
 
-
-    <!-- offer section starts -->
-
-    <section class="offer">
-
-        <h1 class="heading">
-            offer
-        </h1>
-
-        <form action="" method="post">
-            <div class="flex">
-                <div class="box">
-                    <p>Price<span>*</span></p>
-                    <input type="number"name="price" placeholder="offered price" required maxlength="20" min="0" class="input">
-                    </div>
-                <div class="box">
-                    <p>Time <span>*</span></p>
-                    <input type="number"name="time" placeholder="offered deadline" required maxlength="20" min="0" class="input">
-                </div>
-            </div>
-    </form>
-    <input type="submit"  value="send offer" name="send" class="btn" style="align-items: center;">
+    <section class="about">
+        <div class="box">
+            <h3 class="name">Name :</h3>
+            <p></p>
+            <h3 class="surname">Surname :</h3>
+            <p></p>
+            <h3 class="email">email :</h3>
+            <p></p>
+            <a href="#" class="btn">Change</a>
+        </div>
     </section>
-
-    <!-- offer section ends -->
-
-
-<!-- footer section starts -->
 
     <footer class="footer">
 
@@ -79,7 +65,6 @@
                 <a href="login.html"><i class="fas fa-angle-right"></i>account</a>
                 <a href="login.html"><i class="fas fa-angle-right"></i>login</a>
                 <a href="register.html"><i class="fas fa-angle-right"></i>register</a>
-                <a href="post_job.html"><i class="fas fa-angle-right"></i>post job</a>
                 <a href="#"><i class="fas fa-angle-right"></i>dashboard</a>
             </div>
             <div class="box">
@@ -92,6 +77,9 @@
             </div>
         </section>
     </footer>
-    <!-- footer section ends -->
 
-    <script src="js/script.js"></script>
+    <script src="../js/script.js"></script>
+
+</body>
+
+</html>

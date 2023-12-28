@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>All Jobs</title>
-    <link rel="stylesheet" href="css/style.css">
+    <title>Home</title>
+    <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
     <!--header starts-->
@@ -18,19 +18,19 @@
             JobHunt.</a>
 
             <nav class="navbar">
+                <a href="admin.html" style="display: none;">Applications</a>
                 <a href="home.html">Home</a>
                 <a href="about.html">About Us</a>
                 <a href="jobs.html">All jobs</a>
                 <a href="contact.html">Contact Us</a>
-                <a href="login.html">Account</a>
+                <a href="user.html" style="display: none;">Account</a>
+                <a href="login.html">Login </a>
             </nav>
 
-            <a href="post_job.html" class="btn" style="margin-top:0;">Post Job</a>
+            <a href="post_job.html" class="btn" style="margin-top:0;display:none;">Post Job</a>
         </section>
 
-
     </header>
-
     <!--header ends-->
 
     <!--job filter section starts-->
@@ -105,7 +105,7 @@
 
             <div class="box">
                 <div class="company">
-                    <img src="images/1.jpg" alt="">
+                    <img src="../images/1.jpg" alt="">
                     <div>
                         <h3>IT infosys co.</h3>
                         <p>2 day ago</p>
@@ -127,7 +127,7 @@
             </div>
             <div class="box">
                 <div class="company">
-                    <img src="images/2.jpg" alt="">
+                    <img src="../images/2.jpg" alt="">
                     <div>
                         <h3>Vision co.</h3>
                         <p>3 day ago</p><!-- zaman bildirimi-->
@@ -149,7 +149,7 @@
             </div>
             <div class="box">
                 <div class="company">
-                    <img src="images/3.jpg" alt="">
+                    <img src="../images/3.jpg" alt="">
                     <div>
                         <h3>Leaf co.</h3>
                         <p>5 day ago</p><!-- zaman bildirimi-->
@@ -172,7 +172,7 @@
 
             <div class="box">
                 <div class="company">
-                    <img src="images/4.jpg" alt="">
+                    <img src="../images/4.jpg" alt="">
                     <div>
                         <h3>Denver co.</h3>
                         <p>7 day ago</p><!-- zaman bildirimi-->
@@ -195,7 +195,7 @@
 
             <div class="box">
                 <div class="company">
-                    <img src="images/7.jpg" alt="">
+                    <img src="../images/7.jpg" alt="">
                     <div>
                         <h3>Denver co.</h3>
                         <p>9 day ago</p><!-- zaman bildirimi-->
@@ -218,7 +218,7 @@
 
             <div class="box">
                 <div class="company">
-                    <img src="images/6.jpg" alt="">
+                    <img src="../images/6.jpg" alt="">
                     <div>
                         <h3>Denver co.</h3>
                         <p>11 day ago</p><!-- zaman bildirimi-->
@@ -269,7 +269,6 @@
                 <a href="login.html"><i class="fas fa-angle-right"></i>account</a>
                 <a href="login.html"><i class="fas fa-angle-right"></i>login</a>
                 <a href="register.html"><i class="fas fa-angle-right"></i>register</a>
-                <a href="post_job.html"><i class="fas fa-angle-right"></i>post job</a>
                 <a href="#"><i class="fas fa-angle-right"></i>dashboard</a>
             </div>
             <div class="box">
@@ -283,7 +282,7 @@
         </section>
     </footer>
 
-    <script src="js/script.js"></script>
+    <script src="../js/script.js"></script>
     <script>
         let dropdown_items=document.querySelectorAll('.job-filter form .dropdown-container .dropdown .lists .items')
         dropdown_items.forEach(items=> {
