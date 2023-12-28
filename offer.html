@@ -1,13 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>View Job</title>
+    <title>Register</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
-
 <body>
     <!--header starts-->
     <header class="header">
@@ -16,8 +14,8 @@
 
             <div id="menu-btn" class="fas fa-bars-staggered"></div>
 
-            <a href="home.html" class="logo"><i class="fas fa-briefcase"></i>
-                JobHunt.</a>
+            <a href="home.html" class="logo"><i class="fas fa-briefcase" ></i>
+            JobHunt.</a>
 
             <nav class="navbar">
                 <a href="home.html">Home</a>
@@ -34,63 +32,35 @@
     </header>
     <!-- header section ends -->
 
-    <!-- view job section starts -->
 
-    <section class="job-details">
 
-        <h1 class="heading">job details</h1>
+    <!-- offer section starts -->
 
-        <div class="details">
-            <div class="job-info">
-                <h3>senior web designer</h3>
-                <p class="a">IT infosys co.</p>
-                <p><i class="fas fa-map-marker-alt"></i>mumbai,india</p>
+    <section class="offer">
+
+        <h1 class="heading">
+            offer
+        </h1>
+
+        <form action="" method="post">
+            <div class="flex">
+                <div class="box">
+                    <p>Price<span>*</span></p>
+                    <input type="number"name="price" placeholder="offered price" required maxlength="20" min="0" class="input">
+                    </div>
+                <div class="box">
+                    <p>Time <span>*</span></p>
+                    <input type="number"name="time" placeholder="offered deadline" required maxlength="20" min="0" class="input">
+                </div>
             </div>
-            <div class="basic-details">
-                <h3>salary</h3>
-                <p>10k-25k</p>
-                <h3>job type</h3>
-                <p>freelance</p>
-                <h3>schedule</h3>
-                <p>day shift</p>
-            </div>
-            <ul class="requirements">
-                <h3>requirements</h3>
-                <li>education: <span>garduate</span></li>
-                <li>language: <span>english</span></li>
-                <li>experience: <span>3+ years</span></li>
-            </ul>
-            <ul class="skills">
-                <h3>skills</h3>
-                <li>html5 and css3</li>
-                <li>javascript</li>
-                <li>node.js</li>
-                <li>react.js</li>
-                <li>php</li>
-                <li>mysql</li>
-            </ul>
-            <div class="description">
-                <h3>job and project description</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni ipsam earum repudiandae saepe.
-                    Repellendus, libero. Eum illum deserunt repudiandae perspiciatis!</p>
-                    <ul class="infos">
-                        <li>Hiring 2 candidate for this role</li>
-                        <!-- bu kısma veri girşi yapmak lazım backendle -->
-                        <li> date of posted</li> 
-                    </ul>
-            </div>
-            <form action="" method="post" class="flex-btn">
-                <input type="submit" value="apply now" name="apply" class="btn">
-                <!-- bunu yapabilmesi için giriş yapmış olması lazım -->
-                <a href="offer.html" class="btn">offer</a>
-                <button type="submit" class="save"><i class="far fa-heart"></i>
-                <span>save job</span> </button>
-            </form>            
-
-        </div>
+    </form>
+    <input type="submit"  value="send offer" name="send" class="btn" style="align-items: center;">
     </section>
 
-    <!-- view job section endss -->
+    <!-- offer section ends -->
+
+
+<!-- footer section starts -->
 
     <footer class="footer">
 
@@ -122,13 +92,6 @@
             </div>
         </section>
     </footer>
+    <!-- footer section ends -->
 
     <script src="js/script.js"></script>
-
-
-
-
-
-</body>
-
-</html>
