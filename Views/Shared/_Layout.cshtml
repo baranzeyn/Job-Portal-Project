@@ -1,0 +1,87 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Job_Portal_Project</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/style.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/Job_Portal_Project.styles.css" asp-append-version="true" />
+</head>
+
+<body>
+    <!--header starts-->
+    <header class="header">
+
+        <section class="flex">
+
+            <div id="menu-btn" class="fas fa-bars-staggered"></div>
+
+            <a asp-controller="Home" asp-action="Index" class="logo">
+                <i class="fas fa-briefcase"></i>
+                JobHunt.
+            </a>
+
+            <nav class="navbar">
+                <a asp-controller="Home" asp-action="Index"> Home </a>
+                <a asp-controller="About" asp-action="Index"> About Us </a>
+                <a asp-controller="Jobs" asp-action="Index">All jobs</a>
+                <a asp-controller="Contact" asp-action="Index">Contact Us</a>
+                <a asp-controller="Account" asp-action="Index">Account</a>
+            </nav>
+            <a asp-controller="Jobs" asp-action="Postjob" class="btn" style="margin-top:0;">Post Job</a>
+        </section>
+
+    </header>
+    <!--header ends-->
+
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <!--footer starts-->
+
+    <footer class="footer">
+
+        <section class="grid">
+
+            <div class="box">
+                <h3>quick links</h3>
+                <a asp-controller="Home" asp-action="Index"><i class="fas fa-angle-right"></i>home</a>
+                <a asp-controller="About" asp-action="Index"><i class="fas fa-angle-right"></i>abouts</a>
+                <a asp-controller="Jobs" asp-action="Index"><i class="fas fa-angle-right"></i>all jobs</a>
+                <a asp-controller="Contact" asp-action="Index"><i class="fas fa-angle-right"></i>contact us</a>
+                <a href="#"><i class="fas fa-angle-right"></i>filter search</a>
+            </div>
+            <div class="box">
+                <h3>extra links</h3>
+                <a  asp-controller="Account" asp-action="Login"><i class="fas fa-angle-right"></i>account</a>
+                <a  asp-controller="Account" asp-action="Login"><i class="fas fa-angle-right"></i>login</a>
+                <a  asp-controller="Account" asp-action="Register"><i class="fas fa-angle-right"></i>register</a>
+                <a  asp-controller="Jobs" asp-action="PostJob"><i class="fas fa-angle-right"></i>post job</a>
+                <a href="#"><i class="fas fa-angle-right"></i>dashboard</a>
+            </div>
+            <div class="box">
+                <h3>follow us</h3>
+                <a href="#"><i class="fab fa-facebook-f"></i>facebook</a>
+                <a href="#"><i class="fab fa-twitter"></i>twitter</a>
+                <a href="#"><i class="fab fa-instagram"></i>instagram</a>
+                <a href="#"> <i class="fab fa-linkedin"></i>linkedin</a>
+                <a href="#"><i class="fab fa-youtube"></i>youtube</a>
+            </div>
+        </section>
+    </footer>
+    <!--footer ends-->
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/script.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+      <!--jobs section ends-->
+ 
+</body>
+
+</html>

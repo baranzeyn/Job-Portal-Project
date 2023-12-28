@@ -1,0 +1,106 @@
+<!--job filter section starts-->
+
+<section class="job-filter">
+
+    <h1 class="heading">
+        filter jobs
+    </h1>
+
+    <form action="" method="post">
+        <div class="flex">
+            <div class="box">
+                <p>job title <span>*</span></p>
+                <input type="text" name="title" placeholder="keyword,category or company" required maxlength="20"
+                    class="input">
+            </div>
+            <div class="box">
+                <p>job location</p>
+                <input type="text" name="location" placeholder="city, state or country" required maxlength="20"
+                    class="input">
+            </div>
+        </div>
+        <div class="dropdown-container">
+            <div class="dropdown">
+                <input type="text" readonly placeholder="data posted" name="date" maxlength="20" class="output">
+                <div class="lists">
+                    <p class="items">today</p>
+                    <p class="items">this week</p>
+                    <p class="items">this month</p>
+                    <p class="items">this year</p>
+                </div>
+
+            </div>
+
+            <div class="dropdown">
+                <input type="text" readonly name="date" placeholder="education level" maxlength="20" class="output">
+                <div class="lists">
+                    <p class="items">12th pass</p>
+                    <p class="items">bachlelor's degree</p>
+                    <p class="items">master's degree</p>
+                    <p class="items">diploma</p>
+                    <p class="items">10th class</p>
+                    <p class="items">self-paced</p>
+                </div>
+            </div>
+
+            <div class="dropdown">
+                <input type="text" readonly name="date" placeholder="estimated salary" maxlength="20" class="output">
+                <div class="lists">
+                    <p class="items">1k or less</p>
+                    <p class="items">1k-5k</p>
+                    <p class="items">5k-10k</p>
+                    <p class="items">10k-20k</p>
+                    <p class="items">20k-30k</p>
+                </div>
+            </div>
+        </div>
+    </form>
+</section>
+
+
+
+
+
+
+<!--job filter section ends-->
+
+<!--jobs section starts-->
+<section class="jobs-container">
+
+    <h1 class="heading">all jobs</h1>
+    <div class="box-container">
+
+        @for (var i = 0; i < 6; i++)
+        { //FOREACH olarak güncelenecek
+            <div class="box">
+                <div class="company">
+                    <img src="images/1.jpg" alt=""> <!-- Veri Tabanından çekilecek -->
+                    <div>
+                        <h3>Şirket İsmi</h3> <!-- Veri Tabanından çekilecek -->
+                        <p>2 gün önce</p> <!-- Veri Tabanından çekilecek -->
+                    </div>
+                </div>
+                <h3 class="job-title">senior web developer</h3> <!-- Veri Tabanından çekilecek -->
+                <p class="location"><i class="fas fa-map-marker-alt"></i>
+                    <span>Şehir,Ülke</span>
+                </p> <!-- Veri Tabanından çekilecek -->
+                <div class="tags">
+                    <!--jobs salary and other details-->
+                    <p><i class="fas fa-indian-rupee-sign"></i><span>10k-25k</span></p> <!-- Veri Tabanından çekilecek -->
+                    <p><i class="fas fa-briefcase"></i><span>for project</span></p> <!-- Veri Tabanından çekilecek -->
+                    <p><i class="fas fa-clock"></i><span>day shift</span></p> <!-- Veri Tabanından çekilecek -->
+                </div>
+                <div class="flex-btn">
+                    <a asp-controller="Jobs" asp-action="GetJob" class="btn"> view details</a>
+                    <button type="submit" class="far fa-heart" name="save"></button>
+                </div>
+            </div>
+
+        }
+
+        <!--biraz dahah iş eklenebilir ama artık iş tanımlandıkça ekleme yapılacak-->
+
+
+    </div>
+
+</section>
