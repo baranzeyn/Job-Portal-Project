@@ -18,6 +18,10 @@ public class JobsController : Controller {
     {
         return View("PostJob");
     }
+
+    public IActionResult Offer() {
+        return View("Offer");
+    }
 }
 
     

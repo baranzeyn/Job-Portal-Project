@@ -24,14 +24,17 @@
             </a>
 
             <nav class="navbar">
+                <a asp-controller="Applications" asp-action="Index">Applications</a>
                 <a asp-controller="Home" asp-action="Index"> Home </a>
                 <a asp-controller="About" asp-action="Index"> About Us </a>
                 <a asp-controller="Jobs" asp-action="Index">All jobs</a>
                 <a asp-controller="Contact" asp-action="Index">Contact Us</a>
+                 <!-- user girişi olursa displayi inline block yap -->
                 <a asp-controller="Account" asp-action="Index">Account</a>
+                <a asp-controller="Login" asp-action="Login">Login </a>
             </nav>
             <!-- admin girşi yapıldıysa display özelliğini inline block yap -->
-            <a asp-controller="Jobs" asp-action="Postjob" class="btn" style="margin-top:0;display:none;">Post Job</a>
+            <a asp-controller="Jobs" asp-action="Postjob" class="btn" style="margin-top:0;  ">Post Job</a>
         </section>
 
     </header>
@@ -62,7 +65,6 @@
                 <a  asp-controller="Account" asp-action="Login"><i class="fas fa-angle-right"></i>account</a>
                 <a  asp-controller="Account" asp-action="Login"><i class="fas fa-angle-right"></i>login</a>
                 <a  asp-controller="Account" asp-action="Register"><i class="fas fa-angle-right"></i>register</a>
-                <a  asp-controller="Jobs" asp-action="PostJob"><i class="fas fa-angle-right"></i>post job</a>
                 <a href="#"><i class="fas fa-angle-right"></i>dashboard</a>
             </div>
             <div class="box">

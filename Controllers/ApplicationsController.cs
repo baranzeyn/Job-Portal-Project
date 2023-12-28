@@ -4,9 +4,11 @@ using Job_Portal_Project.Models;
 
 namespace Job_Portal_Project.Controllers;
 
-public class AccountController : Controller {
+public class ApplicationsController : Controller {
     public IActionResult Index()
     {
         return View();
     }
 }
+
+    
