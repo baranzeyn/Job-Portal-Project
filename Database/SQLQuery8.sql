@@ -10,3 +10,4 @@ CREATE TABLE Offers (
     CONSTRAINT UC_JobApplicantOffer UNIQUE (JobID, ApplicantID),
     FOREIGN KEY (JobID, ApplicantID) REFERENCES Applications(JobID, ApplicantID)
 );
+
