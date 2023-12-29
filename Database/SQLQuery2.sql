@@ -1,4 +1,5 @@
 -- Kullanýcýlar tablosu
+USE [Jobportal-Db]
 CREATE TABLE Users(
     UserID INT PRIMARY KEY IDENTITY,
     FirstName VARCHAR(50),
