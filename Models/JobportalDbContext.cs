@@ -97,6 +97,7 @@ public partial class JobportalDbContext : DbContext
             entity.Property(e => e.DatePosted)
                 .HasDefaultValueSql("(getdate())")
                 .HasColumnType("datetime");
+            entity.Property(e => e.Deadline).HasMaxLength(20);
             entity.Property(e => e.Education).HasMaxLength(20);
             entity.Property(e => e.Experience).HasMaxLength(20);
             entity.Property(e => e.JobTitle).HasMaxLength(100);
@@ -152,6 +153,7 @@ public partial class JobportalDbContext : DbContext
             entity.Property(e => e.MessageText).HasMaxLength(1000);
             entity.Property(e => e.SenderEmail).HasMaxLength(100);
             entity.Property(e => e.SenderName).HasMaxLength(50);
+            entity.Property(e => e.SenderNum).HasMaxLength(11);
             entity.Property(e => e.SenderRole).HasMaxLength(20);
             entity.Property(e => e.Timestamp)
                 .HasDefaultValueSql("(getdate())")

@@ -7,12 +7,14 @@ namespace Job_Portal_Project.Services
         private readonly IUserService _userService;
         private readonly IAdminService _adminService;
         private readonly IJobsService _JobsService;
+        private readonly IContactService _contactService;
 
-        public ServiceManager(IUserService userService, IAdminService adminService, IJobsService jobsService)
+        public ServiceManager(IUserService userService, IAdminService adminService, IJobsService jobsService, IContactService contactService)
         {
             _userService = userService;
             _adminService = adminService;
             _JobsService = jobsService;
+            _contactService = contactService;
         }
 
         public IUserService UserService => _userService;
@@ -21,6 +23,6 @@ namespace Job_Portal_Project.Services
 
         public IJobsService JobsService => _JobsService;
 
-
+        public IContactService ContactService => _contactService;
     }
 }

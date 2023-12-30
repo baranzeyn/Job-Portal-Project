@@ -16,4 +16,6 @@ public partial class Message
     public string MessageText { get; set; } = null!;
 
     public DateTime? Timestamp { get; set; }
+
+    public string? SenderNum { get; set; }
 }

@@ -16,6 +16,8 @@ builder.Services.AddScoped<IUserService,UserService>();
 builder.Services.AddScoped<IAdminService,AdminService>();
 builder.Services.AddScoped<IJobsRepository,JobsRepository>();
 builder.Services.AddScoped<IJobsService,JobsService>();
+builder.Services.AddScoped<IContactRepository,ContactRepository>();
+builder.Services.AddScoped<IContactService,ContactService>();
 
 builder.Services.AddDbContext<JobportalDbContext>(options =>
 {

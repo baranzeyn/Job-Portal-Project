@@ -1,14 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
 
 namespace Job_Portal_Project.Models;
 
 public partial class Job
 {
-
     public int JobId { get; set; }
-               
+
     public string JobTitle { get; set; } = null!;
 
     public string CompanyName { get; set; } = null!;
@@ -30,10 +28,12 @@ public partial class Job
     public int NumberOfVacancies { get; set; }
 
     public string? Experience { get; set; }
- 
+
     public string? Education { get; set; }
 
     public string? ShiftType { get; set; }
+
+    public string? Deadline { get; set; }
 
     public virtual ICollection<Application> Applications { get; } = new List<Application>();
 
