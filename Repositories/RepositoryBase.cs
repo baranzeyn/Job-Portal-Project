@@ -1,5 +1,7 @@
+using System.Linq.Expressions;
 using Job_Portal_Project.Models;
 using Microsoft.AspNetCore.Server.IIS.Core;
+using Microsoft.EntityFrameworkCore;
 
 namespace Job_Portal_Project.Repositories
 {
@@ -13,8 +15,23 @@ namespace Job_Portal_Project.Repositories
             _context = context;
         }
 
-        public IQueryable<T> FindAll(bool trackChanges){
-            throw new NotImplementedException();
+        public void Create(T t)
+        {
+            _context.Set<T>().Add(t);
         }
+
+        public IQueryable<T> FindAll(bool trackChanges)
+        {
+            return trackChanges
+            ? _context.Set<T>()
+            : _context.Set<T>().AsNoTracking();
+        }
+        public T? FindByCondition(Expression<Func<T, bool>> expression, bool trackChanges)
+        {
+            return trackChanges
+            ? _context.Set<T>().Where(expression).SingleOrDefault()
+            : _context.Set<T>().Where(expression).AsNoTracking().SingleOrDefault();
+            }
+        
     }
 }

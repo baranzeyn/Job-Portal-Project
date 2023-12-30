@@ -1,6 +1,7 @@
 @{
     Layout = "_Layout";
 }
+@model List<Job>
 <div class="home-container">
 
     <section class="home">
@@ -92,33 +93,38 @@
 
     <h1 class="heading">latest jobs</h1>
     <div class="box-container">
-
-        @for (var i = 0; i < 6; i++)
-        { //FOREACH olarak güncelenecek
+        @{
+            var i = 0;
+        }
+        @foreach (var item in Model)
+        {   
+            i++;
             <div class="box">
                 <div class="company">
-                    <img src="images/1.jpg" alt=""> <!-- Veri Tabanından çekilecek -->
+                    <img src="images/1.jpg" alt="">
                     <div>
-                        <h3>Şirket İsmi</h3> <!-- Veri Tabanından çekilecek -->
-                        <p>2 gün önce</p> <!-- Veri Tabanından çekilecek -->
+                        <h3>@item.CompanyName</h3>
+                        <p>@item.DatePosted</p>
                     </div>
                 </div>
-                <h3 class="job-title">senior web developer</h3> <!-- Veri Tabanından çekilecek -->
+                <h3 class="job-title">@item.JobTitle</h3>
                 <p class="location"><i class="fas fa-map-marker-alt"></i>
-                    <span>Şehir,Ülke</span>
-                </p> <!-- Veri Tabanından çekilecek -->
+                    <span>@item.Location</span>
+                </p>
                 <div class="tags">
                     <!--jobs salary and other details-->
-                    <p><i class="fas fa-indian-rupee-sign"></i><span>10k-25k</span></p> <!-- Veri Tabanından çekilecek -->
-                    <p><i class="fas fa-briefcase"></i><span>for project</span></p> <!-- Veri Tabanından çekilecek -->
-                    <p><i class="fas fa-clock"></i><span>day shift</span></p> <!-- Veri Tabanından çekilecek -->
+                    <p><i class="fas fa-indian-rupee-sign"></i><span>@item.SalaryRange</span></p>
+                    <p><i class="fas fa-briefcase"></i><span>@item.JobType</span></p>
+                    <p><i class="fas fa-clock"></i><span>@item.ShiftType</span></p>
                 </div>
                 <div class="flex-btn">
-                    <a asp-controller="Jobs" asp-action="GetJob" class="btn"> view details</a>
+                    <a asp-controller="Jobs" asp-action="GetJob" asp-route-id="@item.JobId" class="btn"> view details</a>
                     <button type="submit" class="far fa-heart" name="save"></button>
                 </div>
             </div>
-
+            if(i > 5) {
+                break;
+            }
         }
 
     </div>

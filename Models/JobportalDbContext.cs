@@ -97,12 +97,14 @@ public partial class JobportalDbContext : DbContext
             entity.Property(e => e.DatePosted)
                 .HasDefaultValueSql("(getdate())")
                 .HasColumnType("datetime");
-            entity.Property(e => e.Deadline).HasMaxLength(20);
+            entity.Property(e => e.Education).HasMaxLength(20);
+            entity.Property(e => e.Experience).HasMaxLength(20);
             entity.Property(e => e.JobTitle).HasMaxLength(100);
             entity.Property(e => e.JobType).HasMaxLength(20);
             entity.Property(e => e.Location).HasMaxLength(100);
             entity.Property(e => e.Requirements).HasMaxLength(255);
             entity.Property(e => e.SalaryRange).HasMaxLength(20);
+            entity.Property(e => e.ShiftType).HasMaxLength(10);
             entity.Property(e => e.Skills).HasMaxLength(255);
         });
 
