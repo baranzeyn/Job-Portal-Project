@@ -30,6 +30,11 @@ public class JobsController : Controller
         var job = _manager.JobsService.GetOneJob(id, false);
         return View("GetJob", job);
     }
+    [HttpPost]
+    public IActionResult ApplyJob(Job job)
+    {
+        return View();
+    }
 
     [HttpGet]
     public IActionResult PostJob()
