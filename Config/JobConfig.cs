@@ -19,7 +19,6 @@ namespace Job_Portal_Project.Config
             builder.Property(e => e.Education).HasMaxLength(20);
             builder.Property(e => e.Experience).HasMaxLength(20);
             builder.Property(e => e.JobTitle).HasMaxLength(100);
-            builder.Property(e => e.JobType).HasMaxLength(20);
             builder.Property(e => e.Location).HasMaxLength(100);
             builder.Property(e => e.Requirements).HasMaxLength(255);
             builder.Property(e => e.SalaryRange).HasMaxLength(20);

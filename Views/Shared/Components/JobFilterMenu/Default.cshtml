@@ -1,0 +1,21 @@
+<section class="job-filter">
+
+    <h1 class="heading">
+        filter jobs
+    </h1>
+
+    <form method="get">
+        <div class="flex">
+            <div class="box">
+                <p>job title <span>*</span></p>
+                <input type="hidden" name="JobId" value="@(Context.Request.Query["JobId"])" />
+                <input type="text" name="SearchTerm" placeholder="keyword, company or location" required maxlength="20" value="@TempData["SearchTerm"]"
+                    class="input">
+            </div>
+        </div>
+        <div>
+            <button type="submit" class="btn">Get Filtered Jobs</button>
+        </div>
+        </div>
+    </form>
+</section>

@@ -5,15 +5,12 @@
 <div class="home-container">
 
     <section class="home">
-        <form action="" method="post">
+        <form method="get" asp-controller="Jobs" asp-action="Index">
             <h3>find your new job</h3>
             <p>job title <span>*</span></p>
-            <input type="text" d="searchTerm" name="searchTerm" placeholder="keyword,category or company" required maxlength="20"
-                class="input">
-            <p>job location </p>
-            <input type="text" name="location" placeholder="city, state or country" required maxlength="20"
-                class="input">
-            <input type="submit" value="search job" name="search" class="btn">
+            <input type="text" d="searchTerm" name="searchTerm"
+                placeholder="keyword, company or location" required maxlength=" 20" class="input">
+            <button type="submit" class="btn">Search Job</button>
         </form>
     </section>
 </div>
@@ -93,12 +90,12 @@
 
     <h1 class="heading">latest jobs</h1>
     <div class="box-container">
-        @{
-            var i = 0;
-        }
-        @foreach (var item in Model)
-        {   
-            i++;
+            @{
+                var i = 0;
+            }
+            @foreach (var item in Model)
+            {
+                i++;
             <div class="box">
                 <div class="company">
                     <img src="images/1.jpg" alt="">
@@ -114,7 +111,6 @@
                 <div class="tags">
                     <!--jobs salary and other details-->
                     <p><i class="fas fa-indian-rupee-sign"></i><span>@item.SalaryRange</span></p>
-                    <p><i class="fas fa-briefcase"></i><span>@item.JobType</span></p>
                     <p><i class="fas fa-clock"></i><span>@item.ShiftType</span></p>
                 </div>
                 <div class="flex-btn">
@@ -122,10 +118,11 @@
                     <button type="submit" class="far fa-heart" name="save"></button>
                 </div>
             </div>
-            if(i > 5) {
-                break;
+                if (i > 5)
+                {
+                    break;
+                }
             }
-        }
 
     </div>
 

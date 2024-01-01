@@ -15,8 +15,6 @@ public partial class Job
 
     public string SalaryRange { get; set; } = null!;
 
-    public string JobType { get; set; } = null!;
-
     public string Requirements { get; set; } = null!;
 
     public string Skills { get; set; } = null!;

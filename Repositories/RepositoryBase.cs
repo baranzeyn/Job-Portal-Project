@@ -31,7 +31,12 @@ namespace Job_Portal_Project.Repositories
             return trackChanges
             ? _context.Set<T>().Where(expression).SingleOrDefault()
             : _context.Set<T>().Where(expression).AsNoTracking().SingleOrDefault();
-            }
-        
+        }
+
+        public IQueryable<T> GetByCondition(Expression<Func<T, bool>> expression)
+        {
+            return _context.Set<T>().Where(expression).AsNoTracking();
+        }
+
     }
 }

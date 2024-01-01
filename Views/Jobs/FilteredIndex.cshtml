@@ -1,8 +1,28 @@
 @model List<Job>
 
-@await Component.InvokeAsync("JobFilterMenu")
-<!--job filter section 
-ends-->
+<section class="job-filter">
+
+    <h1 class="heading">
+        filter jobs
+    </h1>
+
+    <form action="" method="post">
+        <div class="flex">
+            <div class="box">
+                <p>job title <span>*</span></p>
+                <input type="text" name="title" placeholder="keyword,category or company" required maxlength="20"
+                    class="input">
+            </div>
+        </div>
+        <div>
+            <button type="submit" asp-controller="Jobs" asp-action="FilteredIndex" class="btn">Get Filtered Jobs</button>
+        </div>
+        </div>
+    </form>
+</section>
+
+
+<!--job filter section ends-->
 
 <!--jobs section starts-->
 <section class="jobs-container">

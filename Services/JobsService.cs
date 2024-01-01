@@ -1,5 +1,7 @@
+using System.Linq.Expressions;
 using Job_Portal_Project.Models;
 using Job_Portal_Project.Repositories;
+using Job_Portal_Project.RequestParameters;
 
 namespace Job_Portal_Project.Services
 {
@@ -23,10 +25,15 @@ namespace Job_Portal_Project.Services
             return _manager.Jobs.GetAllJobs(trackChanges);
         }
 
+        public IEnumerable<Job> GetAllJobsWithDetails(JobRequestParameters p)
+        {
+            return _manager.Jobs.GetAllJobsWithDetails(p);
+        }
+        
         public Job? GetOneJob(int id, bool trackChanges)
         {
-            return _manager.Jobs.GetOneJob(id,trackChanges);
-        
+            return _manager.Jobs.GetOneJob(id, trackChanges);
+
         }
     }
 }

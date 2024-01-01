@@ -3,6 +3,8 @@ using Microsoft.AspNetCore.Mvc;
 using Job_Portal_Project.Models;
 using Job_Portal_Project.Services;
 using Microsoft.EntityFrameworkCore.Metadata.Internal;
+using System.Linq.Expressions;
+using Job_Portal_Project.RequestParameters;
 
 namespace Job_Portal_Project.Controllers;
 
@@ -17,9 +19,10 @@ public class JobsController : Controller
 
     [HttpGet]
     [Route("Index")]
-    public IActionResult Index()
+    public IActionResult Index(JobRequestParameters p)
     {
-        var list = _manager.JobsService.GetAllJobs(false).ToList();
+        TempData["SearchTerm"] = p.SearchTerm;
+        var list = _manager.JobsService.GetAllJobsWithDetails(p).ToList();
         return View(list);
     }
 
