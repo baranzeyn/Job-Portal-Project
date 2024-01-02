@@ -1,24 +1,27 @@
-<!-- login section begins -->
+@model LoginModel
 <div class="account-form-container">
 
     <section class="account-form">
 
-        <form action="" method="post">
+        <form method="post" asp-controller="Login" asp-action="Login">
 
             <h3>welcome back</h3>
-            <div class="box">
+            <!--       <div class="box">
                 <select name="role" required class="input">
                     <option value="admin">admin</option>
                     <option value="user">user</option>
                 </select>
+            </div> -->
+
+            <div class="box">
+                <div class="text-center">
+                    <div class="text-danger" asp-validation-summary="All"></div>
+                <input type="hidden" asp-for="ReturnUrl" />
+                <input asp-for="Name" placeholder="please enter your nickname" class="input" />
             </div>
             <div class="box">
-                <input type="email" required name="email" maxlength="50" placeholder="please enter your email"
-                    class="input">
-            </div>
-            <div class="box">
-                <input type="password" required name="pass" maxlength="50" placeholder="please enter your password"
-                    class="input">
+                <input type="password" asp-for="Password" maxlength="50"
+                    placeholder="please enter your password" class="input" />
             </div>
 
             <p>don't have an account <a asp-controller="Login" asp-action="Register">register now</a></p>

@@ -24,7 +24,7 @@ namespace Job_Portal_Project.Infrastructure.Extensions
             services.AddIdentity<IdentityUser, IdentityRole>(options =>
             {
                 options.SignIn.RequireConfirmedAccount = false;
-                options.SignIn.RequireConfirmedEmail = true;
+                options.SignIn.RequireConfirmedEmail = false;
                 options.Password.RequireLowercase  = false;
                 options.Password.RequireUppercase = false;
                 options.Password.RequireDigit = false;

@@ -11,7 +11,7 @@ namespace Job_Portal_Project.Repositories
             builder.HasData(
                 new IdentityRole() {Name="User", NormalizedName="USER"},
                 new IdentityRole() {Name="Employer", NormalizedName="EMPLOYER"},
-                new IdentityRole() {Name="Admin", NormalizedName="ADMIN"}
+                new IdentityRole() {Name="Admin", NormalizedName="ADMIN", ConcurrencyStamp = Guid.NewGuid().ToString()}
                 
             );
         }

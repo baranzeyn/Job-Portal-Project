@@ -392,19 +392,20 @@ namespace JobPortalProject.Migrations
                     b.HasData(
                         new
                         {
-                            Id = "1e5a54d2-05ae-449f-91b1-d1378af3a6b4",
+                            Id = "ed882807-6da7-4271-ba72-14cc37fc86b1",
                             Name = "User",
                             NormalizedName = "USER"
                         },
                         new
                         {
-                            Id = "ad0e574d-d634-4526-a5b1-f2b6590e3092",
+                            Id = "bf98230e-2f60-46d1-9c3d-3160b6b9dfd7",
                             Name = "Employer",
                             NormalizedName = "EMPLOYER"
                         },
                         new
                         {
-                            Id = "ec2412e2-7288-4f31-b035-612c60caa365",
+                            Id = "35aa8e37-e9d8-44be-b365-83e2571cb74f",
+                            ConcurrencyStamp = "7f8d7900-750e-4dba-99e6-19cfa0c2dc70",
                             Name = "Admin",
                             NormalizedName = "ADMIN"
                         });

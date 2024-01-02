@@ -8,7 +8,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace JobPortalProject.Migrations
 {
     /// <inheritdoc />
-    public partial class startIdentity : Migration
+    public partial class init : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -340,9 +340,9 @@ namespace JobPortalProject.Migrations
                 columns: new[] { "Id", "ConcurrencyStamp", "Name", "NormalizedName" },
                 values: new object[,]
                 {
-                    { "34302ee4-791c-4f05-ba11-42318bfb8ee2", null, "Admin", "ADMIN" },
-                    { "3a09f25e-0d6f-4006-9d04-657d7e4f83ca", null, "Employer", "EMPLOYER" },
-                    { "724032bb-4650-4ee7-8f68-c26803e8ebda", null, "User", "USER" }
+                    { "35aa8e37-e9d8-44be-b365-83e2571cb74f", "7f8d7900-750e-4dba-99e6-19cfa0c2dc70", "Admin", "ADMIN" },
+                    { "bf98230e-2f60-46d1-9c3d-3160b6b9dfd7", null, "Employer", "EMPLOYER" },
+                    { "ed882807-6da7-4271-ba72-14cc37fc86b1", null, "User", "USER" }
                 });
 
             migrationBuilder.CreateIndex(
