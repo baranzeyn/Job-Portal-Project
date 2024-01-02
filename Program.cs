@@ -9,9 +9,10 @@ using Microsoft.EntityFrameworkCore;
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllersWithViews();
+builder.Services.ConfigureDbContext(builder.Configuration);
+builder.Services.ConfigureIdentity();
 builder.Services.ConfigureRepositoryRegistration();
 builder.Services.ConfigureServicesRegistration();
-builder.Services.ConfigureDbContext(builder.Configuration);
 builder.Services.AddTransient<JobFilterMenuViewComponent>();
 
 var app = builder.Build();
