@@ -24,17 +24,23 @@
             </a>
 
             <nav class="navbar">
-                <a asp-controller="Applications" asp-action="Index">Applications</a>
+                @if (User.Identity.IsAuthenticated && User.IsInRole("Admin"))
+                {
+                    <a asp-controller="Applications" asp-action="Index">Applications</a>
+
+                }
                 <a asp-controller="Home" asp-action="Index"> Home </a>
                 <a asp-controller="About" asp-action="Index"> About Us </a>
                 <a asp-controller="Jobs" asp-action="Index">All jobs</a>
                 <a asp-controller="Contact" asp-action="Index">Contact Us</a>
-                 <!-- user girişi olursa displayi inline block yap -->
-                <a asp-controller="Account" asp-action="Index">Account</a>
-                <a asp-controller="Login" asp-action="Login">Login </a>
+                <!-- user girişi olursa displayi inline block yap -->
+                <partial name="_LoginMenu" />
             </nav>
             <!-- admin girşi yapıldıysa display özelliğini inline block yap -->
-            <a asp-controller="Jobs" asp-action="Postjob" class="btn" style="margin-top:0;  ">Post Job</a>
+            @if (User.Identity.IsAuthenticated && User.IsInRole("Admin"))
+            {
+                <a asp-controller="Jobs" asp-action="Postjob" class="btn" style="margin-top:0;  ">Post Job</a>
+            }
         </section>
 
     </header>
@@ -62,9 +68,9 @@
             </div>
             <div class="box">
                 <h3>extra links</h3>
-                <a  asp-controller="Account" asp-action="Login"><i class="fas fa-angle-right"></i>account</a>
-                <a  asp-controller="Account" asp-action="Login"><i class="fas fa-angle-right"></i>login</a>
-                <a  asp-controller="Account" asp-action="Register"><i class="fas fa-angle-right"></i>register</a>
+                <a asp-controller="Account" asp-action="Login"><i class="fas fa-angle-right"></i>account</a>
+                <a asp-controller="Account" asp-action="Login"><i class="fas fa-angle-right"></i>login</a>
+                <a asp-controller="Account" asp-action="Register"><i class="fas fa-angle-right"></i>register</a>
                 <a href="#"><i class="fas fa-angle-right"></i>dashboard</a>
             </div>
             <div class="box">
@@ -83,8 +89,8 @@
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/script.js" asp-append-version="true"></script>
     @await RenderSectionAsync("Scripts", required: false)
-      <!--jobs section ends-->
- 
+    <!--jobs section ends-->
+
 </body>
 
 </html>

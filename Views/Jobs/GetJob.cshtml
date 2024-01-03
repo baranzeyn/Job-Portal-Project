@@ -33,14 +33,6 @@
                 <li>@Model.DatePosted</li>
             </ul>
         </div>
-        <form method="post" class="flex-btn">
-            <input type="submit" value="apply now" asp-controller="Jobs" asp-action="ApplyJob" class="btn"></input>
-            <!-- bunu yapabilmesi için giriş yapmış olması lazım -->
-            <a asp-controller="Jobs" asp-action="Offer" class="btn">offer</a>
-            <button type="submit" class="save"><i class="far fa-heart"></i>
-                <span>save job</span> </button>
-        </form>
-
-
+        <partial name="_ApplyAndOffer" />
     </div>
 </section>

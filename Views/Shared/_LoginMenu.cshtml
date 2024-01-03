@@ -1,0 +1,10 @@
+@if (User.Identity.IsAuthenticated && User.IsInRole("Admin"))
+{
+    <a asp-controller="Account" asp-action="Index">Account</a>
+    <a asp-controller="Login" asp-action="Logout">Logout </a>
+}
+else
+{  
+     <a asp-controller="Login" asp-action="Login">Login </a>
+  
+}
