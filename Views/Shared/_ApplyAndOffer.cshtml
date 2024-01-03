@@ -1,10 +1,14 @@
-@if (User.Identity.IsAuthenticated && User.IsInRole("Admin"))
+@if (User.IsInRole("Admin") || User.IsInRole("User"))
 {
     <form method="post" class="flex-btn">
         <input type="submit" value="apply now" asp-controller="Jobs" asp-action="ApplyJob" class="btn"></input>
         <!-- bunu yapabilmesi için giriş yapmış olması lazım -->
         <a asp-controller="Jobs" asp-action="Offer" class="btn">offer</a>
     </form>
+}
+else if(User.IsInRole("Employer"))
+{
+    
 }
 else
 {

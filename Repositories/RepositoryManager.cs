@@ -15,6 +15,7 @@ namespace Job_Portal_Project.Repositories
 
         public IContactRepository Contact => _contactRepository;
 
+
         public RepositoryManager(IAdminRepository adminRepository, JobportalDbContext context, IUserRepository userRepository, IJobsRepository jobsRepository, IContactRepository contactRepository)
         {
             _context = context;

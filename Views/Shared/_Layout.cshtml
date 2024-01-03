@@ -24,7 +24,7 @@
             </a>
 
             <nav class="navbar">
-                @if (User.Identity.IsAuthenticated && User.IsInRole("Admin"))
+                @if (User.IsInRole("Admin") || User.IsInRole("Employer"))
                 {
                     <a asp-controller="Applications" asp-action="Index">Applications</a>
 
@@ -37,7 +37,7 @@
                 <partial name="_LoginMenu" />
             </nav>
             <!-- admin girşi yapıldıysa display özelliğini inline block yap -->
-            @if (User.Identity.IsAuthenticated && User.IsInRole("Admin"))
+            @if (User.IsInRole("Admin") || User.IsInRole("Employer"))
             {
                 <a asp-controller="Jobs" asp-action="Postjob" class="btn" style="margin-top:0;  ">Post Job</a>
             }

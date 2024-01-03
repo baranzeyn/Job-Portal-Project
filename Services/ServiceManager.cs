@@ -1,5 +1,7 @@
 
 
+using Job_Portal_Project.Repositories;
+
 namespace Job_Portal_Project.Services
 {
     public class ServiceManager : IServiceManager
@@ -24,5 +26,7 @@ namespace Job_Portal_Project.Services
         public IJobsService JobsService => _JobsService;
 
         public IContactService ContactService => _contactService;
+
+
     }
 }

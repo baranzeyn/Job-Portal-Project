@@ -5,16 +5,21 @@ using Job_Portal_Project.Services;
 using Microsoft.EntityFrameworkCore.Metadata.Internal;
 using System.Linq.Expressions;
 using Job_Portal_Project.RequestParameters;
+using Microsoft.AspNetCore.Identity;
 
 namespace Job_Portal_Project.Controllers;
 
 public class JobsController : Controller
 {
     private readonly IServiceManager _manager;
+    private readonly SignInManager<IdentityUser> _signInManager;
+    private readonly UserManager<IdentityUser> _userManager;
 
-    public JobsController(IServiceManager manager)
+    public JobsController(IServiceManager manager, UserManager<IdentityUser> userManager, SignInManager<IdentityUser> signInManager)
     {
         _manager = manager;
+        _userManager = userManager;
+        _signInManager = signInManager;
     }
 
     [HttpGet]
@@ -34,8 +39,13 @@ public class JobsController : Controller
         return View("GetJob", job);
     }
     [HttpPost]
-    public IActionResult ApplyJob(Job job)
+    public async Task<IActionResult> ApplyJobAsync(Job job)
     {
+        IdentityUser user = await _userManager.GetUserAsync(User);
+        if (user is not null)
+        {
+            var _applicantID = await _userManager.GetUserNameAsync(user);
+        }
         return View();
     }
 
@@ -47,10 +57,14 @@ public class JobsController : Controller
 
     [HttpPost]
     [ValidateAntiForgeryToken]
-    public IActionResult PostJob([FromForm] Job job)
+    public async Task<IActionResult> PostJob([FromForm] Job job)
     {
         if (ModelState.IsValid)
         {
+            IdentityUser user = await _userManager.GetUserAsync(User);
+            if (user != null)
+            {
+            }
             job.DatePosted = DateTime.Now;
             _manager.JobsService.CreateJob(job);
             return RedirectToAction("Index");

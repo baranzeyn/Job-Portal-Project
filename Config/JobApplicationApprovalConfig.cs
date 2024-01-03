@@ -36,10 +36,11 @@ namespace Job_Portal_Project.Config
                 .HasForeignKey(d => d.JobId)
                 .HasConstraintName("FK__JobApplic__JobID__5070F446");
 
-            builder.HasOne(d => d.Application).WithOne(p => p.JobApplicationsApproval)
-                .HasPrincipalKey<Application>(p => new { p.JobId, p.ApplicantId })
-                .HasForeignKey<JobApplicationsApproval>(d => new { d.JobId, d.ApplicantId })
-                .HasConstraintName("FK__JobApplicationsA__5535A963");
+            builder.HasOne(d => d.Application)
+            .WithOne(p => p.JobApplicationsApproval)
+            .HasPrincipalKey<Application>(p => new { p.JobId, p.ApplicantId })
+            .HasForeignKey<JobApplicationsApproval>(d => new { d.JobId, d.ApplicantId })
+            .HasConstraintName("FK__JobApplicationsA__5535A963");
         }
     }
 }
