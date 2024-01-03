@@ -9,7 +9,7 @@ public partial class Application
 
     public int? JobId { get; set; }
 
-    public int? ApplicantId { get; set; }
+    public string? ApplicantId { get; set; }
 
     public DateTime? ApplicationDate { get; set; }
 

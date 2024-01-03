@@ -15,7 +15,7 @@ namespace Job_Portal_Project.Config
             builder.HasIndex(e => new { e.JobId, e.ApplicantId }, "UC_JobApplication").IsUnique();
 
             builder.Property(e => e.ApplicationApprovalId).HasColumnName("ApplicationApprovalID");
-            builder.Property(e => e.AdminId).HasColumnName("AdminID");
+            builder.Property(e => e.UserId).HasColumnName("UserID");
             builder.Property(e => e.ApplicantId).HasColumnName("ApplicantID");
             builder.Property(e => e.ApplicationDate).HasColumnType("datetime");
             builder.Property(e => e.ApprovalDate).HasColumnType("datetime");
@@ -23,14 +23,6 @@ namespace Job_Portal_Project.Config
             builder.Property(e => e.Status)
                 .HasMaxLength(20)
                 .HasDefaultValueSql("('pending')");
-
-            builder.HasOne(d => d.Admin).WithMany(p => p.JobApplicationsApprovals)
-                .HasForeignKey(d => d.AdminId)
-                .HasConstraintName("FK__JobApplic__Admin__5165187F");
-
-            builder.HasOne(d => d.Applicant).WithMany(p => p.JobApplicationsApprovals)
-                .HasForeignKey(d => d.ApplicantId)
-                .HasConstraintName("FK__JobApplic__Appli__52593CB8");
 
             builder.HasOne(d => d.Job).WithMany(p => p.JobApplicationsApprovals)
                 .HasForeignKey(d => d.JobId)

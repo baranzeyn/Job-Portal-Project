@@ -26,10 +26,6 @@ namespace Job_Portal_Project.Config
                 .HasMaxLength(20)
                 .HasDefaultValueSql("('pending')");
 
-            builder.HasOne(d => d.Applicant).WithMany(p => p.Applications)
-                .HasForeignKey(d => d.ApplicantId)
-                .HasConstraintName("FK__Applicati__Appli__49C3F6B7");
-
             builder.HasOne(d => d.Job).WithMany(p => p.Applications)
                 .HasForeignKey(d => d.JobId)
                 .HasConstraintName("FK__Applicati__JobID__48CFD27E");

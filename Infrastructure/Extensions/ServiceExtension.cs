@@ -37,7 +37,6 @@ namespace Job_Portal_Project.Infrastructure.Extensions
         {
             // Add services to the container.
             services.AddScoped<IRepositoryManager, RepositoryManager>();
-            services.AddScoped<IAdminRepository, AdminRepository>();
             services.AddScoped<IUserRepository, UserRepository>();
             services.AddScoped<IJobsRepository, JobsRepository>();
             services.AddScoped<IContactRepository, ContactRepository>();
@@ -48,7 +47,6 @@ namespace Job_Portal_Project.Infrastructure.Extensions
 
             services.AddScoped<IServiceManager, ServiceManager>();
             services.AddScoped<IUserService, UserService>();
-            services.AddScoped<IAdminService, AdminService>();
             services.AddScoped<IJobsService, JobsService>();
             services.AddScoped<IContactService, ContactService>();
         }

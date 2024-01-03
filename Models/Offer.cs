@@ -9,7 +9,7 @@ public partial class Offer
 
     public int? JobId { get; set; }
 
-    public int? ApplicantId { get; set; }
+    public string? ApplicantId { get; set; }
 
     public decimal OfferAmount { get; set; }
 
@@ -18,8 +18,6 @@ public partial class Offer
     public DateTime? OfferDate { get; set; }
 
     public string? Status { get; set; }
-
-    public virtual User? Applicant { get; set; }
 
     public virtual Application? Application { get; set; }
 
