@@ -7,5 +7,6 @@ namespace Job_Portal_Project.Models
         public List<Job> Job { get; set; }
         public List<Offer> Offer { get; set; }
         public List<IdentityUser> User { get; set; }
+        public string comment { get; set; }
     }
 }

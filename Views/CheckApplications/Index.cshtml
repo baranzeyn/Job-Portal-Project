@@ -50,7 +50,9 @@
                         <form method="post" asp-controller="CheckApplications" asp-action="Check">
                             <input type="hidden" name="userName" value="@user.UserName" />
                             <button type="submit" class="btn" style="background-color: rgb(59, 197, 41);">Check</button>
+                            <h5 class="mt-5">@Model.comment</h5>
                         </form>
+                        
                     </div>
 
                 </div>

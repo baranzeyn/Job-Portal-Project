@@ -17,7 +17,6 @@ namespace Job_Portal_Project.Controllers
             _serviceManager = serviceManager;
             _userManager = userManager;
         }
-
         [HttpGet]
         public IActionResult Index()
         {
@@ -52,7 +51,8 @@ namespace Job_Portal_Project.Controllers
             {
                 Offer = offerPendingList,
                 Job = jobList,
-                User = userList
+                User = userList,
+                comment = TempData["Comment"] as string
             };
 
             return View(model);
@@ -62,6 +62,17 @@ namespace Job_Portal_Project.Controllers
         public IActionResult Check([FromForm] IdentityUser user)
         {
             RunScript.Run();
+            string projeDosyaYolu = Directory.GetCurrentDirectory();
+            string excelDosyaAdi = "comments.xlsx";
+            string filePath = Path.Combine(projeDosyaYolu, excelDosyaAdi);
+
+            var userNameClean = "@" + user.UserName;
+            var text = RunScript.GetTextByAuthor(filePath, userNameClean);
+            var cleanText = user.UserName + " : " + text;
+            if (text is not null)
+            {
+                TempData["Comment"] = cleanText;
+            }
             return RedirectToAction("Index");
         }
 
