@@ -31,13 +31,30 @@
                     <p><i class="fas fa-clock"></i><span>@offer.OfferDuration</span></p>
                 </div>
                 <div class="flex-btn">
-                    <form method="post">
-                        <button type="submit" class="btn" asp-controller="CheckApplications" asp-action="Check" asp-route-id="@user.UserName">Check</button>
-                        <button type="submit" class="btn" asp-controller="CheckApplications" asp-action="Done" asp-route-id="@offer.OfferId">Done</button>
-                        <button type="submit" class="btn" asp-controller="CheckApplications" asp-action="Decline" asp-route-id="@offer.OfferId"
-                            style="background-color: rgb(197, 41, 41);">Decline</button>
-                    </form> 
+                    <div class="form-container">
+                        <form method="post" asp-controller="CheckApplications" asp-action="Done">
+                            <input type="hidden" name="OfferId" value="@offer.OfferId" />
+                            <button type="submit" class="btn mb-5">Done</button>
+                        </form>
+                    </div>
+
+                    <div class="form-container">
+                        <form method="post" asp-controller="CheckApplications" asp-action="Decline">
+                            <input type="hidden" name="OfferId" value="@offer.OfferId" />
+                            <button style="" type="submit" class="btn mb-5" style="background-color: rgb(197, 41, 41);">Decline</button>
+                        </form>
+                    </div>
+
+
+                    <div class="form-container">
+                        <form method="post" asp-controller="CheckApplications" asp-action="Check">
+                            <input type="hidden" name="userName" value="@user.UserName" />
+                            <button type="submit" class="btn" style="background-color: rgb(59, 197, 41);">Check</button>
+                        </form>
+                    </div>
+
                 </div>
+
             </div>
         }
     </div>

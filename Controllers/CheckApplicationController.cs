@@ -2,6 +2,9 @@ using Job_Portal_Project.Models;
 using Job_Portal_Project.Services;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using IronPython.Hosting;
+using Microsoft.Scripting.Hosting;
+
 
 namespace Job_Portal_Project.Controllers
 {
@@ -56,19 +59,25 @@ namespace Job_Portal_Project.Controllers
             return View(model);
         }
 
-        public IActionResult Check(string userName)
+        [HttpPost]
+        public IActionResult Check([FromForm] IdentityUser user)
+        {
+            string pythonScriptPath = "./Python/pyhton.py";
+            var engine = Python.CreateEngine();
+            var scope = engine.CreateScope();
+            engine.ExecuteFile(pythonScriptPath, scope);
+            var a = user;
+            return RedirectToAction("Index");
+        }
+
+        public IActionResult Done([FromForm] Offer offer)
         {
             return RedirectToAction("Index");
         }
 
-        public IActionResult Done(int offerId)
+        public IActionResult Decline(Offer offerr)
         {
-            return RedirectToAction("Index");
-        }
-
-        public IActionResult Decline(int id)
-        {
-            var offer = _serviceManager.OfferService.GetOneOfferByID(id, false);
+            var offer = _serviceManager.OfferService.GetOneOfferByID(offerr.OfferId, false);
             offer.Status = "rejected";
             _serviceManager.OfferService.UpdateOneOffer(offer);
             return RedirectToAction("Index");
