@@ -17,5 +17,10 @@ namespace Job_Portal_Project.Services
             _manager.Offer.Create(offer);
             _manager.Save();
         }
+
+        public IEnumerable<Offer> GetAllOffers(bool trackChanges)
+        {
+            return _manager.Offer.GetAllOffers(trackChanges);
+        }
     }
 }

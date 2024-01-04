@@ -12,5 +12,10 @@ namespace Job_Portal_Project.Repositories
         {
             Create(offer);
         }
+
+        public IQueryable<Offer> GetAllOffers(bool trackChanges)
+        {
+            return FindAll(trackChanges);
+        }
     }
 }
