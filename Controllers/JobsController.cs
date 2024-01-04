@@ -45,6 +45,17 @@ public class JobsController : Controller
         var user = await _userManager.GetUserAsync(User);
         var _userId = await _userManager.GetUserIdAsync(user);
         _manager.ApplicationService.createApplication(new Application(), job.JobId, _userId);
+        Offer offer = new Offer
+        {
+            OfferAmount = 0,
+            OfferDuration = 0,
+            OfferDate = DateTime.Now,
+            Status = "pending",
+            ApplicantId = _userId,
+            JobId = job.JobId
+        };
+        _manager.OfferService.CreateOffer(offer);
+
         return RedirectToAction("Index");
     }
 
@@ -78,10 +89,12 @@ public class JobsController : Controller
         return View("Offer");
     }
     [HttpPost]
-    public async Task<IActionResult> Offer(int id,Offer offer)
+    public async Task<IActionResult> Offer(int id, Offer offer)
     {
+
         var user = await _userManager.GetUserAsync(User);
         var userIdForOffer = await _userManager.GetUserIdAsync(user);
+        _manager.ApplicationService.createApplication(new Application(), id, userIdForOffer);
         offer.JobId = id;
         offer.OfferDate = DateTime.Now;
         offer.ApplicantId = userIdForOffer;
