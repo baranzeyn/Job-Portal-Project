@@ -2,9 +2,8 @@ using Job_Portal_Project.Models;
 using Job_Portal_Project.Services;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
-using IronPython.Hosting;
-using Microsoft.Scripting.Hosting;
-
+using Python.Runtime;
+using Job_Portal_Project.Scripts;
 
 namespace Job_Portal_Project.Controllers
 {
@@ -62,11 +61,7 @@ namespace Job_Portal_Project.Controllers
         [HttpPost]
         public IActionResult Check([FromForm] IdentityUser user)
         {
-            string pythonScriptPath = "./Python/pyhton.py";
-            var engine = Python.CreateEngine();
-            var scope = engine.CreateScope();
-            engine.ExecuteFile(pythonScriptPath, scope);
-            var a = user;
+            RunScript.Run();
             return RedirectToAction("Index");
         }
 

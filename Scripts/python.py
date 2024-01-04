@@ -1,4 +1,3 @@
-import os
 import googleapiclient.discovery
 import pandas as pd
 
@@ -32,10 +31,6 @@ df = pd.DataFrame(comments, columns=['author', 'published_at', 'updated_at', 'li
 
 # Check if the file exists and delete it
 excel_file_path = "comments.xlsx"
-if os.path.exists(excel_file_path):
-    os.remove(excel_file_path)
-    print(f"Deleted existing file: {excel_file_path}")
-
 # Save the DataFrame to Excel
 df.to_excel(excel_file_path, index=False)
 print(f"Excel file '{excel_file_path}' created successfully.")
