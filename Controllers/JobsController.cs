@@ -6,6 +6,7 @@ using Microsoft.EntityFrameworkCore.Metadata.Internal;
 using System.Linq.Expressions;
 using Job_Portal_Project.RequestParameters;
 using Microsoft.AspNetCore.Identity;
+using Microsoft.Identity.Client;
 
 namespace Job_Portal_Project.Controllers;
 
@@ -39,11 +40,11 @@ public class JobsController : Controller
         return View("GetJob", job);
     }
     [HttpPost]
-    public async Task<IActionResult> ApplyJob(Job job) 
+    public async Task<IActionResult> ApplyJob(Job job)
     {
         var user = await _userManager.GetUserAsync(User);
         var _userId = await _userManager.GetUserIdAsync(user);
-        _manager.ApplicationService.createApplication(new Application(), job.JobId,_userId);
+        _manager.ApplicationService.createApplication(new Application(), job.JobId, _userId);
         return RedirectToAction("Index");
     }
 
@@ -71,9 +72,23 @@ public class JobsController : Controller
         return View();
     }
 
+    [HttpGet]
     public IActionResult Offer()
     {
         return View("Offer");
+    }
+    [HttpPost]
+    public async Task<IActionResult> Offer(int id,Offer offer)
+    {
+        var user = await _userManager.GetUserAsync(User);
+        var userIdForOffer = await _userManager.GetUserIdAsync(user);
+        offer.JobId = id;
+        offer.OfferDate = DateTime.Now;
+        offer.ApplicantId = userIdForOffer;
+
+        _manager.OfferService.CreateOffer(offer);
+
+        return RedirectToAction("Index");
     }
 }
 

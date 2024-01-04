@@ -1,26 +1,28 @@
 <!-- offer section starts -->
-
+@model Offer
 <section class="offer">
 
     <h1 class="heading">
         offer
     </h1>
 
-    <form action="" method="post">
+    <form asp-controller="Jobs" asp-action="Offer" method="post">
         <div class="flex">
             <div class="box">
+                <input type="hidden" asp-for="Status" value="pending">
                 <p>Price<span>*</span></p>
-                <input type="number" name="price" placeholder="offered price" required maxlength="20" min="0"
+                <input type="number" asp-for="OfferAmount" placeholder="offered price" required maxlength="20" min="0"
                     class="input">
             </div>
             <div class="box">
                 <p>Time <span>*</span></p>
-                <input type="number" name="time" placeholder="offered deadline" required maxlength="20" min="0"
-                    class="input">
+                <input type="number" asp-for="OfferDuration" placeholder="offered deadline" required maxlength="20"
+                    min="0" class="input">
             </div>
         </div>
+        <input type="submit" value="send offer" name="send" class="btn" style="align-items: center;">
+
     </form>
-    <input type="submit" value="send offer" name="send" class="btn" style="align-items: center;">
 </section>
 
 <!-- offer section ends -->

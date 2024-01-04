@@ -6,7 +6,7 @@
 
         <input type="submit" value="apply now" class="btn"></input>
         <!-- bunu yapabilmesi için giriş yapmış olması lazım -->
-        <a asp-controller="Jobs" asp-action="Offer" class="btn">offer</a>
+        <a asp-controller="Jobs" asp-action="Offer" asp-route-id="@Model.JobId" class="btn">offer</a>
     </form>
 }
 else if(User.IsInRole("Employer"))
