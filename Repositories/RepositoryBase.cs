@@ -38,5 +38,9 @@ namespace Job_Portal_Project.Repositories
             return _context.Set<T>().Where(expression).AsNoTracking();
         }
 
+        public void Remove(T t)
+        {
+            _context.Set<T>().Remove(t);
+        }
     }
 }

@@ -1,4 +1,5 @@
 using Job_Portal_Project.Models;
+using Microsoft.EntityFrameworkCore.Metadata.Conventions;
 
 namespace Job_Portal_Project.Repositories
 {
@@ -13,9 +14,21 @@ namespace Job_Portal_Project.Repositories
             Create(offer);
         }
 
+        public void DeleteOneOffer(Offer offer)
+        {
+            Remove(offer);
+        }
+
         public IQueryable<Offer> GetAllOffers(bool trackChanges)
         {
             return FindAll(trackChanges);
         }
+
+        public Offer? GetOneOffer(int id, bool trackChanges)
+        {
+            return FindByCondition(o => o.OfferId.Equals(id), trackChanges);
+
+        }
+    
     }
 }

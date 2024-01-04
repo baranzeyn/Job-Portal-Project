@@ -9,6 +9,7 @@ namespace Job_Portal_Project.Repositories
         T? FindByCondition(Expression<Func<T, bool>> expression, bool trackChanges);
         IQueryable<T> GetByCondition(Expression<Func<T, bool>> expression);
         void Create(T t);
+        void Remove(T t);
 
     }
 }

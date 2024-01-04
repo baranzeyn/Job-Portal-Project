@@ -22,27 +22,35 @@ public class ApplicationsController : Controller
     public IActionResult Index()
     {
         var offerList = _serviceManager.OfferService.GetAllOffers(false).ToList();
+        var offerPendingList = new List<Offer>();
         var jobList = new List<Job>();
         var userList = new List<IdentityUser>();
 
         foreach (var offer in offerList)
         {
-            var job = _serviceManager.JobsService.GetOneJob((int)offer.JobId, false);
-            if (job != null)
-            {
-                jobList.Add(job);
+            if (offer.Status == "pending")
+            {   
+                offerPendingList.Add(offer);
+
+                var job = _serviceManager.JobsService.GetOneJob((int)offer.JobId, false);
+                if (job != null)
+                {
+                    jobList.Add(job);
+                }
+                // IdentityUser'ı bul ve listeye ekle
+                var identityUser = _userManager.FindByIdAsync(offer.ApplicantId).Result;
+                if (identityUser != null)
+                {
+                    userList.Add(identityUser);
+                }
+
             }
-            // IdentityUser'ı bul ve listeye ekle
-            var identityUser = _userManager.FindByIdAsync(offer.ApplicantId).Result;
-            if (identityUser != null)
-            {
-                userList.Add(identityUser);
-            }
+
         }
-        
+
         var model = new OfferWithUserAndJobViewModel
         {
-            Offer = offerList,
+            Offer = offerPendingList,
             Job = jobList,
             User = userList
         };
@@ -53,6 +61,23 @@ public class ApplicationsController : Controller
     public IActionResult Index(int id)
     {
         return View();
+    }
+
+    public IActionResult Accept(int id)
+    {
+
+        var offer = _serviceManager.OfferService.GetOneOfferByID(id, false);
+        offer.Status = "accepted";
+        _serviceManager.OfferService.UpdateOneOffer(offer);
+        return RedirectToAction("Index");
+    }
+
+    public IActionResult Decline(int id)
+    {
+        var offer = _serviceManager.OfferService.GetOneOfferByID(id,true);
+        offer.Status = "rejected";
+        _serviceManager.OfferService.UpdateOneOffer(offer);
+        return RedirectToAction("Index");
     }
 }
 

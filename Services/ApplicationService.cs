@@ -22,9 +22,23 @@ namespace Job_Portal_Project.Services
             _manager.Save();
         }
 
+        public void DeleteOneApplicationByApplicantID(string id)
+        {
+             var application = _manager.Application.GetOneApplicationByApplicantID(id,false);
+            if (application is not null)
+            {
+                _manager.Application.DeleteOneApplication(application);
+                _manager.Save();
+            }
+        }
         public IEnumerable<Application> GetApplicationsByUserID(string id, bool trackChanges)
         {
-            return _manager.Application.GetApplications(id,trackChanges);
+            return _manager.Application.GetApplications(id, trackChanges);
+        }
+
+        public Application? GetOneApplication(int id, bool trackChanges)
+        {
+            return _manager.Application.GetOneApplication(id, trackChanges);
         }
     }
 }

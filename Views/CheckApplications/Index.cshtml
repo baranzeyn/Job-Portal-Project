@@ -2,7 +2,7 @@
 
 <section class="application-container">
 
-    <h1 class="heading">All Applications</h1>
+    <h1 class="heading">Check Applications</h1>
     <div class="box-container">
 
         @for (var i = 0; i < Model.Offer.Count; i++)
@@ -32,10 +32,11 @@
                 </div>
                 <div class="flex-btn">
                     <form method="post">
-                        <button type="submit" class="btn" asp-controller="Applications" asp-action="Accept" asp-route-id="@offer.OfferId">accept</button>
-                        <button type="submit" class="btn" asp-controller="Applications" asp-action="Decline" asp-route-id="@offer.OfferId"
-                            style="background-color: rgb(197, 41, 41);">decline</button>
-                    </form>
+                        <button type="submit" class="btn" asp-controller="CheckApplications" asp-action="Check" asp-route-id="@user.UserName">Check</button>
+                        <button type="submit" class="btn" asp-controller="CheckApplications" asp-action="Done" asp-route-id="@offer.OfferId">Done</button>
+                        <button type="submit" class="btn" asp-controller="CheckApplications" asp-action="Decline" asp-route-id="@offer.OfferId"
+                            style="background-color: rgb(197, 41, 41);">Decline</button>
+                    </form> 
                 </div>
             </div>
         }

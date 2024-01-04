@@ -27,6 +27,7 @@
                 @if (User.IsInRole("Admin") || User.IsInRole("Employer"))
                 {
                     <a asp-controller="Applications" asp-action="Index">Applications</a>
+                    <a asp-controller="CheckApplications" asp-action="Index">Check Applications</a>
 
                 }
                 <a asp-controller="Home" asp-action="Index"> Home </a>
