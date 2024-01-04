@@ -40,6 +40,7 @@ namespace Job_Portal_Project.Infrastructure.Extensions
             services.AddScoped<IUserRepository, UserRepository>();
             services.AddScoped<IJobsRepository, JobsRepository>();
             services.AddScoped<IContactRepository, ContactRepository>();
+            services.AddScoped<IApplicationRepository, ApplicationRepository>();
         }
         public static void ConfigureServicesRegistration(this IServiceCollection services)
         {
@@ -49,6 +50,7 @@ namespace Job_Portal_Project.Infrastructure.Extensions
             services.AddScoped<IUserService, UserService>();
             services.AddScoped<IJobsService, JobsService>();
             services.AddScoped<IContactService, ContactService>();
+            services.AddScoped<IApplicationService, ApplicationService>();
         }
     }
 }

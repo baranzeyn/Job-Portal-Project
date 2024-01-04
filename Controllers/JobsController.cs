@@ -39,14 +39,12 @@ public class JobsController : Controller
         return View("GetJob", job);
     }
     [HttpPost]
-    public async Task<IActionResult> ApplyJobAsync(Job job)
+    public async Task<IActionResult> ApplyJob(Job job) 
     {
-        IdentityUser user = await _userManager.GetUserAsync(User);
-        if (user is not null)
-        {
-            var _applicantID = await _userManager.GetUserNameAsync(user);
-        }
-        return View();
+        var user = await _userManager.GetUserAsync(User);
+        var _userId = await _userManager.GetUserIdAsync(user);
+        _manager.ApplicationService.createApplication(new Application(), job.JobId,_userId);
+        return RedirectToAction("Index");
     }
 
     [HttpGet]
@@ -64,6 +62,7 @@ public class JobsController : Controller
             IdentityUser user = await _userManager.GetUserAsync(User);
             if (user != null)
             {
+                job.UserId = await _userManager.GetUserIdAsync(user);
             }
             job.DatePosted = DateTime.Now;
             _manager.JobsService.CreateJob(job);

@@ -8,6 +8,7 @@ namespace Job_Portal_Project.Services
         IUserService UserService { get; }
         IJobsService JobsService { get; }
         IContactService ContactService { get; }
+        IApplicationService ApplicationService {get; }
 
     }
 }

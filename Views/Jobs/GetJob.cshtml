@@ -33,6 +33,8 @@
                 <li>@Model.DatePosted</li>
             </ul>
         </div>
-        <partial name="_ApplyAndOffer" />
+        @{
+            await Html.RenderPartialAsync("_ApplyAndOffer", Model);
+        }
     </div>
 </section>

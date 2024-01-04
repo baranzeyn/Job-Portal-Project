@@ -5,6 +5,7 @@ namespace Job_Portal_Project.Repositories
         IUserRepository User { get; }
         IJobsRepository Jobs { get; }
         IContactRepository Contact { get; }
+        IApplicationRepository Application {get; }
         void Save();
     }
 }

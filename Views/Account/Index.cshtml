@@ -1,12 +1,13 @@
+@model IdentityUser
 <div class="section-title"> Account</div>
 <section class="about">
     <div class="box">
-        <h3 class="name">Name :</h3>
         <p></p>
-        <h3 class="surname">Surname :</h3>
+        <h3 class="surname">Username : @Model.UserName</h3>
         <p></p>
-        <h3 class="email">email :</h3>
+        <h3 class="email">email : @Model.Email</h3>
         <p></p>
         <a href="#" class="btn">Change</a>
     </div>
+    <partial name="_AppliedJobs"></partial>
 </section>

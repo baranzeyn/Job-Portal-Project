@@ -1,7 +1,10 @@
+@model Job
 @if (User.IsInRole("Admin") || User.IsInRole("User"))
 {
-    <form method="post" class="flex-btn">
-        <input type="submit" value="apply now" asp-controller="Jobs" asp-action="ApplyJob" class="btn"></input>
+    <form method="post" asp-controller="Jobs" asp-action="ApplyJob">
+        <input type="hidden" asp-for="JobId" value="@Model.JobId"/>
+
+        <input type="submit" value="apply now" class="btn"></input>
         <!-- bunu yapabilmesi için giriş yapmış olması lazım -->
         <a asp-controller="Jobs" asp-action="Offer" class="btn">offer</a>
     </form>
