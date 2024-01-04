@@ -76,8 +76,11 @@ namespace Job_Portal_Project.Controllers
             return RedirectToAction("Index");
         }
 
-        public IActionResult Done([FromForm] Offer offer)
+        public IActionResult Done([FromForm] Offer offerr)
         {
+            var offer = _serviceManager.OfferService.GetOneOfferByID(offerr.OfferId, false);
+            offer.Status = "rejected";
+            _serviceManager.OfferService.UpdateOneOffer(offer);
             return RedirectToAction("Index");
         }
 
