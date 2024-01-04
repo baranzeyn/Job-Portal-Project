@@ -31,7 +31,7 @@ public partial class JobportalDbContext : IdentityDbContext<IdentityUser>
     public virtual DbSet<User> Users { get; set; }
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-        => optionsBuilder.UseSqlServer("Server=TAHA\\MSSQLSERVER02;Database=Jobqweqwe;Trusted_Connection=True;TrustServerCertificate=true;MultipleActiveResultSets=true");
+        => optionsBuilder.UseSqlServer("Server=TAHA\\MSSQLSERVER02;Database=Jobportal-Db-Son;Trusted_Connection=True;TrustServerCertificate=true;MultipleActiveResultSets=true");
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {

@@ -8,7 +8,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace JobPortalProject.Migrations
 {
     /// <inheritdoc />
-    public partial class init : Migration
+    public partial class offerUpdate : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -249,6 +249,35 @@ namespace JobPortalProject.Migrations
                 });
 
             migrationBuilder.CreateTable(
+                name: "Offers",
+                columns: table => new
+                {
+                    OfferID = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    JobID = table.Column<int>(type: "int", nullable: true),
+                    ApplicantID = table.Column<string>(type: "nvarchar(450)", nullable: true),
+                    OfferAmount = table.Column<decimal>(type: "decimal(18,2)", nullable: false),
+                    OfferDuration = table.Column<int>(type: "int", nullable: false),
+                    OfferDate = table.Column<DateTime>(type: "datetime", nullable: true, defaultValueSql: "(getdate())"),
+                    Status = table.Column<string>(type: "nvarchar(20)", maxLength: 20, nullable: true, defaultValueSql: "('pending')"),
+                    UserId = table.Column<int>(type: "int", nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK__Offers__8EBCF0B1F0D44759", x => x.OfferID);
+                    table.ForeignKey(
+                        name: "FK_Offers_Users_UserId",
+                        column: x => x.UserId,
+                        principalTable: "Users",
+                        principalColumn: "UserID");
+                    table.ForeignKey(
+                        name: "FK__Offers__JobID__59063A47",
+                        column: x => x.JobID,
+                        principalTable: "Jobs",
+                        principalColumn: "JobID");
+                });
+
+            migrationBuilder.CreateTable(
                 name: "JobApplicationsApproval",
                 columns: table => new
                 {
@@ -282,48 +311,14 @@ namespace JobPortalProject.Migrations
                         principalColumns: new[] { "JobID", "ApplicantID" });
                 });
 
-            migrationBuilder.CreateTable(
-                name: "Offers",
-                columns: table => new
-                {
-                    OfferID = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
-                    JobID = table.Column<int>(type: "int", nullable: true),
-                    ApplicantID = table.Column<string>(type: "nvarchar(450)", nullable: true),
-                    OfferAmount = table.Column<decimal>(type: "decimal(18,2)", nullable: false),
-                    OfferDuration = table.Column<int>(type: "int", nullable: false),
-                    OfferDate = table.Column<DateTime>(type: "datetime", nullable: true, defaultValueSql: "(getdate())"),
-                    Status = table.Column<string>(type: "nvarchar(20)", maxLength: 20, nullable: true, defaultValueSql: "('pending')"),
-                    UserId = table.Column<int>(type: "int", nullable: true)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK__Offers__8EBCF0B1F0D44759", x => x.OfferID);
-                    table.ForeignKey(
-                        name: "FK_Offers_Users_UserId",
-                        column: x => x.UserId,
-                        principalTable: "Users",
-                        principalColumn: "UserID");
-                    table.ForeignKey(
-                        name: "FK__Offers__5DCAEF64",
-                        columns: x => new { x.JobID, x.ApplicantID },
-                        principalTable: "Applications",
-                        principalColumns: new[] { "JobID", "ApplicantID" });
-                    table.ForeignKey(
-                        name: "FK__Offers__JobID__59063A47",
-                        column: x => x.JobID,
-                        principalTable: "Jobs",
-                        principalColumn: "JobID");
-                });
-
             migrationBuilder.InsertData(
                 table: "AspNetRoles",
                 columns: new[] { "Id", "ConcurrencyStamp", "Name", "NormalizedName" },
                 values: new object[,]
                 {
-                    { "2f7db78c-ee78-473a-8220-e3215bacb263", "988d409a-75dc-45fc-91b2-8b60f2483a32", "Admin", "ADMIN" },
-                    { "5438d5eb-7dea-4b9a-b3a8-26955a8f981a", null, "Employer", "EMPLOYER" },
-                    { "cad2e0aa-2824-4d39-a886-ef344919908b", null, "User", "USER" }
+                    { "16bce210-e517-4666-a286-09f4fa28aed7", "03cd3476-1278-4564-be93-e835a72d3636", "Admin", "ADMIN" },
+                    { "7d12edbe-5878-46d7-9733-95a8cef34b2a", null, "Employer", "EMPLOYER" },
+                    { "b02979fd-d6d7-4729-ba49-675cd186c6fc", null, "User", "USER" }
                 });
 
             migrationBuilder.CreateIndex(

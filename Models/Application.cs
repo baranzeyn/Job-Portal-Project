@@ -21,5 +21,4 @@ public partial class Application
 
     public virtual JobApplicationsApproval? JobApplicationsApproval { get; set; }
 
-    public virtual Offer? Offer { get; set; }
 }

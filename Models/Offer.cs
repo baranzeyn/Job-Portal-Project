@@ -19,7 +19,5 @@ public partial class Offer
 
     public string? Status { get; set; }
 
-    public virtual Application? Application { get; set; }
-
     public virtual Job? Job { get; set; }
 }

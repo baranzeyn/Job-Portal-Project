@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace JobPortalProject.Migrations
 {
     [DbContext(typeof(JobportalDbContext))]
-    [Migration("20240103212102_init")]
-    partial class init
+    [Migration("20240104023630_offerUpdate")]
+    partial class offerUpdate
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -360,20 +360,20 @@ namespace JobPortalProject.Migrations
                     b.HasData(
                         new
                         {
-                            Id = "cad2e0aa-2824-4d39-a886-ef344919908b",
+                            Id = "b02979fd-d6d7-4729-ba49-675cd186c6fc",
                             Name = "User",
                             NormalizedName = "USER"
                         },
                         new
                         {
-                            Id = "5438d5eb-7dea-4b9a-b3a8-26955a8f981a",
+                            Id = "7d12edbe-5878-46d7-9733-95a8cef34b2a",
                             Name = "Employer",
                             NormalizedName = "EMPLOYER"
                         },
                         new
                         {
-                            Id = "2f7db78c-ee78-473a-8220-e3215bacb263",
-                            ConcurrencyStamp = "988d409a-75dc-45fc-91b2-8b60f2483a32",
+                            Id = "16bce210-e517-4666-a286-09f4fa28aed7",
+                            ConcurrencyStamp = "03cd3476-1278-4564-be93-e835a72d3636",
                             Name = "Admin",
                             NormalizedName = "ADMIN"
                         });
@@ -601,14 +601,6 @@ namespace JobPortalProject.Migrations
                         .WithMany("Offers")
                         .HasForeignKey("UserId");
 
-                    b.HasOne("Job_Portal_Project.Models.Application", "Application")
-                        .WithOne("Offer")
-                        .HasForeignKey("Job_Portal_Project.Models.Offer", "JobId", "ApplicantId")
-                        .HasPrincipalKey("Job_Portal_Project.Models.Application", "JobId", "ApplicantId")
-                        .HasConstraintName("FK__Offers__5DCAEF64");
-
-                    b.Navigation("Application");
-
                     b.Navigation("Job");
                 });
 
@@ -666,8 +658,6 @@ namespace JobPortalProject.Migrations
             modelBuilder.Entity("Job_Portal_Project.Models.Application", b =>
                 {
                     b.Navigation("JobApplicationsApproval");
-
-                    b.Navigation("Offer");
                 });
 
             modelBuilder.Entity("Job_Portal_Project.Models.Job", b =>

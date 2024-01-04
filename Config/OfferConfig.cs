@@ -27,10 +27,6 @@ namespace Job_Portal_Project.Config
                 .HasForeignKey(d => d.JobId)
                 .HasConstraintName("FK__Offers__JobID__59063A47");
 
-            builder.HasOne(d => d.Application).WithOne(p => p.Offer)
-                .HasPrincipalKey<Application>(p => new { p.JobId, p.ApplicantId })
-                .HasForeignKey<Offer>(d => new { d.JobId, d.ApplicantId })
-                .HasConstraintName("FK__Offers__5DCAEF64");
         }
     }
 }
