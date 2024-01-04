@@ -1,14 +1,15 @@
-@model List<Application>
+@model UserWithApplicationsViewModel
+
 <div class="box-container">
     <div class="box">
         <h3 class="job-title">Applied Jobs : </h3>
-        <ul>
-            @foreach (var item in Model)
+        <ol class="display-6">
+            @foreach (var item in Model.AppliedJobs)
             {
                 <li>
                     <a asp-controller="Jobs" asp-action="GetJob" asp-route-id="@item.JobId" class="btn">Go to job details</a>
                 </li>
             }
-        </ul>
+        </ol>
     </div>
 </div>

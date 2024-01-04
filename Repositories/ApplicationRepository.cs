@@ -12,5 +12,9 @@ namespace Job_Portal_Project.Repositories
         {
             Create(application);
         }
+        public IQueryable<Application> GetApplications(string id, bool trackChanges)
+        {
+            return GetByCondition(a => a.ApplicantId.Equals(id));
+        }
     }
 }

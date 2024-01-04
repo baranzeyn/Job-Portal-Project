@@ -21,5 +21,10 @@ namespace Job_Portal_Project.Services
             _manager.Application.createApplication(application);
             _manager.Save();
         }
+
+        public IEnumerable<Application> GetApplicationsByUserID(string id, bool trackChanges)
+        {
+            return _manager.Application.GetApplications(id,trackChanges);
+        }
     }
 }

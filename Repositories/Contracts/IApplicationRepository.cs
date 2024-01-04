@@ -5,5 +5,6 @@ namespace Job_Portal_Project.Repositories
     public interface IApplicationRepository : IRepositoryBase<Application>
     {
         void createApplication(Application application);
+        IQueryable<Application> GetApplications(string id,bool trackChanges);
     }
 }
